@@ -78,7 +78,7 @@ Iniside the container
 	./check_values.sh
 	```
 
- 7. Start the apache spark application (locally/cluster) that receives stream from Kafka and store them in elasticsearch
+ 7. Start the apache spark application (locally option /master-cluster option) that receives stream from Kafka and store them in elasticsearch
  
  ```
  sudo docker exec -it spark-master bash
@@ -90,9 +90,9 @@ Iniside the container
   
         ```
 	7.A.1 cd /app/submit_scripts ( pyspark application is at /app)
-	7.A.2 ./submit_emb_local.sh (LOCALLY) or ./submit_emb_spark.sh (MASTER-CLUSTER)
+	7.A.2 ./submit_emb_local.sh (locally version) or ./submit_emb_spark.sh (master-cluster version)
 	```
- 7.B) Outside the container (using the MASTER-CLUSTER): 
+ 7.B) Outside the container (using the master-cluster version): 
  
  	```
 	start_pyspark_app.sh
