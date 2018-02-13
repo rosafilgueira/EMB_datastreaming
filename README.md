@@ -79,13 +79,13 @@ cd /scripts
 ```
 -index: emb_test
 -type: emb
-- Fields: 
-	date" : { "type" : "text"},
-        "time" : { "type" : "text"},
-        "sec": { "type" : "integer"},
-        "ph": { "type" : "float"},
-        "water_level": { "type" : "float"},
-        "water_temp": { "type" : "float"},
+-fields: 
+	date" : { "type" : "text"}
+        "time" : { "type" : "text"}
+        "sec": { "type" : "integer"}
+        "ph": { "type" : "float"}
+        "water_level": { "type" : "float"}
+        "water_temp": { "type" : "float"}
 	"tdg": { "type" : "integer"}
 	
 ```	
@@ -102,7 +102,7 @@ cd /opt/create-index
 ./check_values.sh
 ```
 
- 7. Start the apache spark application (locally option /master-cluster option) that receives stream from Kafka and store them in elasticsearch
+7. Start the apache spark application (locally option /master-cluster option) that receives streams from Kafka (listening 'emb' topic) and store them in elasticsearch (index emb_test, type: emb)
  
  ```
  sudo docker exec -it spark-master bash
