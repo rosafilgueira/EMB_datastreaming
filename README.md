@@ -71,6 +71,7 @@ sudo docker exec -it elasticsearch bash
 ```
 
 Iniside the container
+
 	```
 	cd /opt/create-index
 	./check_index.sh
