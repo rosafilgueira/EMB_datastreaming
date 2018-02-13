@@ -48,6 +48,7 @@
 
 4. Start to produce streams of EMB data to the 'emb' topic - 1 stream per line and file	-
 (open a new tab - this one will be used for producing the streams to 'emb' topic)
+
 ```
 sudo docker exec -it spark-worker bash
 ```
@@ -64,6 +65,7 @@ Inside the container:
 
 6. Check if the elasticsearch has been correctly created -  
 (open new tab - this one will be used for searching data in elasticsearch)
+
 ```
 sudo docker exec -it elasticsearch bash
 ```
@@ -75,6 +77,7 @@ Iniside the container
 	```
 
  7. Start the apache spark application (locally/cluster) that receives stream from Kafka and store them in elasticsearch
+ 
  ```
  sudo docker exec -it spark-master bash
  ```
@@ -86,6 +89,7 @@ Iniside the container
 	7.A.2 ./submit_emb_local.sh (LOCALLY) or ./submit_emb_spark.sh (MASTER-CLUSTER)
 	```
  7.B) Outside the container (using the MASTER-CLUSTER): 
+ 
  	 ```
 	start_pyspark_app.sh
    	```
@@ -94,6 +98,7 @@ Iniside the container
 
 Two options:
 	Inside the elasticsearch container:
+	
 	```
 	sudo docker exec -it elasticsearch bash
 	cd /opt/create-index
