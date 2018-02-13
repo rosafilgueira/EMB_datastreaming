@@ -1,0 +1,1 @@
+$SPARK_HOME/bin/spark-submit --master local[8] --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.2.0 --jars /app_dependencies/elasticsearch-hadoop-5.0.0.jar --conf spark.io.compression.codec=lz4 /app/integration_emb_spark_app.py --zq zookeeper:2181 --topic emb --checkpoint ./ --es_host elasticsearch --es_port 9200 --output /test_output/streaming_output/emb

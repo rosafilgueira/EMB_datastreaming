@@ -1,0 +1,172 @@
+version: '2'
+services:
+  falcon:
+    build: ./falcon
+    ports:
+     - "8000:8000"
+    links:
+     - kafka
+     - cassandra
+  zookeeper:
+    image: wurstmeister/zookeeper
+    hostname: zookeeper
+    container_name: zookeper
+    ports:
+     - "2181:2181"
+  kafka:
+    image: wurstmeister/kafka
+    ports:
+      - "9092:9092"
+    hostname: kafka
+    links: 
+      - zookeeper
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=192.5.87.53
+      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
+      - KAFKA_ADVERTISED_PORT=9092
+    volumes:
+      - ./kafka_script/:/scripts
+      - /var/run/docker.sock:/var/run/docker.sock
+  namenode:
+    image: bde2020/hadoop-namenode:1.1.0-hadoop2.8-java8
+    container_name: namenode
+    volumes:
+      - ./data/namenode:/hadoop/dfs/name
+    environment:
+      - CLUSTER_NAME=test
+    env_file:
+      - ./hadoop.env
+    ports:
+      - 50070:50070
+  datanode:
+    image: bde2020/hadoop-datanode:1.1.0-hadoop2.8-java8
+    container_name: datanode
+    depends_on: 
+      - namenode
+    volumes:
+      - ./data/datanode:/hadoop/dfs/data
+    env_file:
+      - ./hadoop.env
+    ports:
+      - 50075:50075
+  spark-master:
+    image: rosafilgueira/spark.2.2.0:latest 
+    container_name: spark-master
+    environment:
+      - MASTER=spark://192.5.87.53:7077
+      - SPARK_CONF_DIR=/conf
+      - SPARK_PUBLIC_DNS=192.5.87.53
+    expose:
+      - 7001
+      - 7002
+      - 7003
+      - 7004
+      - 7005
+      - 7006
+      - 7077
+      - 6066
+    ports:
+      - 4040:4040
+      - 8080:8080
+      - 7077:7077
+      - 6066:6066
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - ./conf/master:/conf
+      - ./pyspark_app:/app/
+      - ./pyspark_app/dependencies:/app_dependencies
+      - ./pyspark_app/submit_scripts/:/submit_scripts
+      - ./pyspark_app/data:/data
+    command: bin/spark-class org.apache.spark.deploy.master.Master -h spark-master
+    links:
+      - kafka
+      - cassandra
+      - elasticsearch
+  spark-worker:
+    image: rosafilgueira/spark.2.2.0:latest 
+    hostname: spark-worker
+    environment:
+      - SPARK_CONF_DIR=/conf
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_MEMORY=1g
+      - SPARK_WORKER_PORT=8881
+      - SPARK_WORKER_WEBUI_PORT=8081
+      - SPARK_MASTER=spark://192.5.87.53:7077
+      - SPARK_PUBLIC_DNS=192.5.87.53
+    links:
+      - spark-master
+      - kafka
+      - elasticsearch
+    depends_on:
+      - spark-master
+      - kafka
+      - elasticsearch
+    expose:
+      - 7012
+      - 7013
+      - 7014
+      - 7015
+      - 7016
+      - 8881
+    ports:
+      - 8081:8081
+    env_file:
+      - ./hadoop.env
+    volumes:
+      - ./conf/worker:/conf
+      - ./pyspark_app/tmp:/test_output
+      - ./pyspark_app/data:/data
+      - ./pyspark_app/scripts:/scripts
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://192.5.87.53:7077
+
+  notebook:
+    image: jupyter/pyspark-notebook
+    hostname: jupyter
+    container_name: spark-notebook
+    depends_on:
+      - spark-master
+      - cassandra
+      - kafka
+    links:
+      - spark-master
+      - kafka
+      - cassandra
+    environment:
+      - SPARK_OPTS='--master=spark://spark-master:7077'
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./spark:/home/jovyan/work
+      - ./mydata:/home/jovyan/work/data
+    command: "start-notebook.sh --NotebookApp.token=''"
+
+
+  hue:
+    image: bde2020/hdfs-filebrowser:3.11
+    ports:
+      - 8088:8088
+    environment:
+      - NAMENODE_HOST=namenode
+  
+  cassandra:
+    image: "cassandra:3"
+    volumes:
+      - ./cassandra:/bdr
+      - ./mydata:/data
+    ports:
+      - "7000:7000"
+      - "7001:7001" 
+      - "7199:7199"
+      - "9042:9042"
+      - "9160:9160"
+
+  elasticsearch:
+    image: rosafilgueira/elasticsearch:last
+    environment:
+      - Des.network.host=0.0.0.0
+    expose:
+      - 9200
+    ports:
+      - "9200:9200"
+

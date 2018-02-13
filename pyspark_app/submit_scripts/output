@@ -1,0 +1,1058 @@
+Ivy Default Cache set to: /root/.ivy2/cache
+The jars for the packages stored in: /root/.ivy2/jars
+:: loading settings :: url = jar:file:/usr/spark-2.2.0/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+org.apache.spark#spark-streaming-kafka-0-8_2.11 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent;1.0
+	confs: [default]
+	found org.apache.spark#spark-streaming-kafka-0-8_2.11;2.2.0 in central
+	found org.apache.kafka#kafka_2.11;0.8.2.1 in central
+	found org.scala-lang.modules#scala-xml_2.11;1.0.2 in central
+	found com.yammer.metrics#metrics-core;2.2.0 in central
+	found org.slf4j#slf4j-api;1.7.16 in central
+	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 in central
+	found com.101tec#zkclient;0.3 in central
+	found log4j#log4j;1.2.17 in central
+	found org.apache.kafka#kafka-clients;0.8.2.1 in central
+	found net.jpountz.lz4#lz4;1.3.0 in central
+	found org.xerial.snappy#snappy-java;1.1.2.6 in central
+	found org.apache.spark#spark-tags_2.11;2.2.0 in central
+	found org.spark-project.spark#unused;1.0.0 in central
+:: resolution report :: resolve 2570ms :: artifacts dl 14ms
+	:: modules in use:
+	com.101tec#zkclient;0.3 from central in [default]
+	com.yammer.metrics#metrics-core;2.2.0 from central in [default]
+	log4j#log4j;1.2.17 from central in [default]
+	net.jpountz.lz4#lz4;1.3.0 from central in [default]
+	org.apache.kafka#kafka-clients;0.8.2.1 from central in [default]
+	org.apache.kafka#kafka_2.11;0.8.2.1 from central in [default]
+	org.apache.spark#spark-streaming-kafka-0-8_2.11;2.2.0 from central in [default]
+	org.apache.spark#spark-tags_2.11;2.2.0 from central in [default]
+	org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 from central in [default]
+	org.scala-lang.modules#scala-xml_2.11;1.0.2 from central in [default]
+	org.slf4j#slf4j-api;1.7.16 from central in [default]
+	org.spark-project.spark#unused;1.0.0 from central in [default]
+	org.xerial.snappy#snappy-java;1.1.2.6 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   13  |   2   |   2   |   0   ||   13  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent
+	confs: [default]
+	0 artifacts copied, 13 already retrieved (0kB/14ms)
+18/02/12 15:31:32 INFO spark.SparkContext: Running Spark version 2.2.0
+18/02/12 15:31:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/02/12 15:31:33 INFO spark.SparkContext: Submitted application: PythonStreamingKafkaEMB
+18/02/12 15:31:33 INFO spark.SecurityManager: Changing view acls to: root
+18/02/12 15:31:33 INFO spark.SecurityManager: Changing modify acls to: root
+18/02/12 15:31:33 INFO spark.SecurityManager: Changing view acls groups to: 
+18/02/12 15:31:33 INFO spark.SecurityManager: Changing modify acls groups to: 
+18/02/12 15:31:33 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+18/02/12 15:31:33 INFO util.Utils: Successfully started service 'sparkDriver' on port 42122.
+18/02/12 15:31:33 INFO spark.SparkEnv: Registering MapOutputTracker
+18/02/12 15:31:33 INFO spark.SparkEnv: Registering BlockManagerMaster
+18/02/12 15:31:33 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+18/02/12 15:31:33 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+18/02/12 15:31:33 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-61729e56-fe54-4512-96a7-52dd98034488
+18/02/12 15:31:33 INFO memory.MemoryStore: MemoryStore started with capacity 912.3 MB
+18/02/12 15:31:33 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+18/02/12 15:31:33 INFO util.log: Logging initialized @6356ms
+18/02/12 15:31:33 INFO server.Server: jetty-9.3.z-SNAPSHOT
+18/02/12 15:31:33 INFO server.Server: Started @6473ms
+18/02/12 15:31:33 INFO server.AbstractConnector: Started ServerConnector@6b9bc9ee{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+18/02/12 15:31:33 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@f15482b{/jobs,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1c63db2{/jobs/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@39ef1a1d{/jobs/job,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@75260761{/jobs/job/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@65118be1{/stages,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1d108f35{/stages/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@63cb1b8{/stages/stage,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@54de7d3f{/stages/stage/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4f5f7bfc{/stages/pool,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3ac99412{/stages/pool/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1846b1b9{/storage,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3afc0a95{/storage/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2eab080c{/storage/rdd,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@231d0dca{/storage/rdd/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3bf60957{/environment,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7166062d{/environment/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6b370d8a{/executors,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@61cbabe2{/executors/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@52c0aeb5{/executors/threadDump,null,AVAILABLE,@Spark}
+18/02/12 15:31:33 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@224c3694{/executors/threadDump/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@31e0f705{/static,null,AVAILABLE,@Spark}
+18/02/12 15:31:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@167142fc{/,null,AVAILABLE,@Spark}
+18/02/12 15:31:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6cfec272{/api,null,AVAILABLE,@Spark}
+18/02/12 15:31:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@c12f933{/jobs/job/kill,null,AVAILABLE,@Spark}
+18/02/12 15:31:34 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2be7f22f{/stages/stage/kill,null,AVAILABLE,@Spark}
+18/02/12 15:31:34 INFO ui.SparkUI: Bound SparkUI to 0.0.0.0, and started at http://192.171.148.207:4040
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/app_dependencies/elasticsearch-hadoop-5.0.0.jar at spark://172.18.0.7:42122/jars/elasticsearch-hadoop-5.0.0.jar with timestamp 1518449494042
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar at spark://172.18.0.7:42122/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar with timestamp 1518449494043
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar at spark://172.18.0.7:42122/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar with timestamp 1518449494043
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar at spark://172.18.0.7:42122/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar with timestamp 1518449494043
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://172.18.0.7:42122/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1518449494043
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar at spark://172.18.0.7:42122/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar with timestamp 1518449494043
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/com.yammer.metrics_metrics-core-2.2.0.jar at spark://172.18.0.7:42122/jars/com.yammer.metrics_metrics-core-2.2.0.jar with timestamp 1518449494044
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar at spark://172.18.0.7:42122/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar with timestamp 1518449494044
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/com.101tec_zkclient-0.3.jar at spark://172.18.0.7:42122/jars/com.101tec_zkclient-0.3.jar with timestamp 1518449494044
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar at spark://172.18.0.7:42122/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar with timestamp 1518449494044
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at spark://172.18.0.7:42122/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1518449494044
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/log4j_log4j-1.2.17.jar at spark://172.18.0.7:42122/jars/log4j_log4j-1.2.17.jar with timestamp 1518449494044
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar at spark://172.18.0.7:42122/jars/net.jpountz.lz4_lz4-1.3.0.jar with timestamp 1518449494045
+18/02/12 15:31:34 INFO spark.SparkContext: Added JAR file:/root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar at spark://172.18.0.7:42122/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar with timestamp 1518449494045
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/app/integration_emb_spark_app.py at file:/app/integration_emb_spark_app.py with timestamp 1518449494493
+18/02/12 15:31:34 INFO util.Utils: Copying /app/integration_emb_spark_app.py to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/integration_emb_spark_app.py
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar at file:/root/.ivy2/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar with timestamp 1518449494514
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar at file:/root/.ivy2/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar with timestamp 1518449494528
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka_2.11-0.8.2.1.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar at file:/root/.ivy2/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar with timestamp 1518449494558
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-tags_2.11-2.2.0.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:/root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1518449494570
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.spark-project.spark_unused-1.0.0.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar at file:/root/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar with timestamp 1518449494580
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/com.yammer.metrics_metrics-core-2.2.0.jar at file:/root/.ivy2/jars/com.yammer.metrics_metrics-core-2.2.0.jar with timestamp 1518449494596
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/com.yammer.metrics_metrics-core-2.2.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.yammer.metrics_metrics-core-2.2.0.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar at file:/root/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar with timestamp 1518449494608
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/com.101tec_zkclient-0.3.jar at file:/root/.ivy2/jars/com.101tec_zkclient-0.3.jar with timestamp 1518449494622
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/com.101tec_zkclient-0.3.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.101tec_zkclient-0.3.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar at file:/root/.ivy2/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar with timestamp 1518449494636
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka-clients-0.8.2.1.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar at file:/root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1518449494655
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.slf4j_slf4j-api-1.7.16.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/log4j_log4j-1.2.17.jar at file:/root/.ivy2/jars/log4j_log4j-1.2.17.jar with timestamp 1518449494670
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/log4j_log4j-1.2.17.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/log4j_log4j-1.2.17.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar at file:/root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar with timestamp 1518449494696
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/net.jpountz.lz4_lz4-1.3.0.jar
+18/02/12 15:31:34 INFO spark.SparkContext: Added file file:/root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar at file:/root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar with timestamp 1518449494718
+18/02/12 15:31:34 INFO util.Utils: Copying /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.xerial.snappy_snappy-java-1.1.2.6.jar
+18/02/12 15:31:34 INFO executor.Executor: Starting executor ID driver on host localhost
+18/02/12 15:31:34 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44544.
+18/02/12 15:31:34 INFO netty.NettyBlockTransferService: Server created on 172.18.0.7:44544
+18/02/12 15:31:34 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/02/12 15:31:34 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 172.18.0.7, 44544, None)
+18/02/12 15:31:34 INFO storage.BlockManagerMasterEndpoint: Registering block manager 172.18.0.7:44544 with 912.3 MB RAM, BlockManagerId(driver, 172.18.0.7, 44544, None)
+18/02/12 15:31:34 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 172.18.0.7, 44544, None)
+18/02/12 15:31:34 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, 172.18.0.7, 44544, None)
+18/02/12 15:31:35 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@4b6b692a{/metrics/json,null,AVAILABLE,@Spark}
+-------> :args.output is /test_output/streaming_output/emb
+------> topic is emb, and zq zookeeper:2181
+18/02/12 15:31:36 INFO util.FileBasedWriteAheadLog_ReceivedBlockTracker: Recovered 5 write ahead log files from file:/app/submit_scripts/receivedBlockMetadata
+18/02/12 15:31:36 INFO scheduler.ReceiverTracker: Starting 1 receivers
+18/02/12 15:31:36 INFO scheduler.ReceiverTracker: ReceiverTracker started
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka.KafkaInputDStream@3b340875
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Initialized and validated org.apache.spark.streaming.api.python.PythonTransformedDStream@5ab5cfda
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@cff3c42
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka.KafkaInputDStream@3b340875
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Initialized and validated org.apache.spark.streaming.api.python.PythonTransformedDStream@5ab5cfda
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@543568ec
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO kafka.KafkaInputDStream: Initialized and validated org.apache.spark.streaming.kafka.KafkaInputDStream@3b340875
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO python.PythonTransformedDStream: Initialized and validated org.apache.spark.streaming.api.python.PythonTransformedDStream@5ab5cfda
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Slide time = 10000 ms
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Storage level = Serialized 1x Replicated
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Checkpoint interval = null
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Remember interval = 10000 ms
+18/02/12 15:31:36 INFO dstream.ForEachDStream: Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@30d6b213
+18/02/12 15:31:36 INFO util.RecurringTimer: Started timer for JobGenerator at time 1518449500000
+18/02/12 15:31:36 INFO scheduler.JobGenerator: Started JobGenerator at 1518449500000 ms
+18/02/12 15:31:36 INFO scheduler.JobScheduler: Started JobScheduler
+18/02/12 15:31:36 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5cf02630{/streaming,null,AVAILABLE,@Spark}
+18/02/12 15:31:36 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1c5797f7{/streaming/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:36 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@464796ba{/streaming/batch,null,AVAILABLE,@Spark}
+18/02/12 15:31:36 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3e29f644{/streaming/batch/json,null,AVAILABLE,@Spark}
+18/02/12 15:31:36 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@220e97f6{/static/streaming,null,AVAILABLE,@Spark}
+18/02/12 15:31:36 INFO streaming.StreamingContext: StreamingContext started
+18/02/12 15:31:36 INFO scheduler.ReceiverTracker: Receiver 0 started
+18/02/12 15:31:36 INFO scheduler.DAGScheduler: Got job 0 (start at NativeMethodAccessorImpl.java:0) with 1 output partitions
+18/02/12 15:31:36 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (start at NativeMethodAccessorImpl.java:0)
+18/02/12 15:31:36 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/02/12 15:31:36 INFO scheduler.DAGScheduler: Missing parents: List()
+18/02/12 15:31:36 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:620), which has no missing parents
+18/02/12 15:31:36 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 68.6 KB, free 912.2 MB)
+18/02/12 15:31:36 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 24.4 KB, free 912.2 MB)
+18/02/12 15:31:36 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.18.0.7:44544 (size: 24.4 KB, free: 912.3 MB)
+18/02/12 15:31:36 INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+18/02/12 15:31:37 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (Receiver 0 ParallelCollectionRDD[0] at makeRDD at ReceiverTracker.scala:620) (first 15 tasks are for partitions Vector(0))
+18/02/12 15:31:37 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+18/02/12 15:31:37 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, PROCESS_LOCAL, 5707 bytes)
+18/02/12 15:31:37 INFO executor.Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1518449494570
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.spark-project.spark_unused-1.0.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar with timestamp 1518449494580
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar with timestamp 1518449494514
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar with timestamp 1518449494558
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-tags_2.11-2.2.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1518449494655
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.slf4j_slf4j-api-1.7.16.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.slf4j_slf4j-api-1.7.16.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/com.101tec_zkclient-0.3.jar with timestamp 1518449494622
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/com.101tec_zkclient-0.3.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.101tec_zkclient-0.3.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/com.yammer.metrics_metrics-core-2.2.0.jar with timestamp 1518449494596
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/com.yammer.metrics_metrics-core-2.2.0.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.yammer.metrics_metrics-core-2.2.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/log4j_log4j-1.2.17.jar with timestamp 1518449494670
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/log4j_log4j-1.2.17.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/log4j_log4j-1.2.17.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/app/integration_emb_spark_app.py with timestamp 1518449494493
+18/02/12 15:31:37 INFO util.Utils: /app/integration_emb_spark_app.py has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/integration_emb_spark_app.py
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar with timestamp 1518449494608
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar with timestamp 1518449494528
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka_2.11-0.8.2.1.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar with timestamp 1518449494718
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.xerial.snappy_snappy-java-1.1.2.6.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar with timestamp 1518449494636
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka-clients-0.8.2.1.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching file:/root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar with timestamp 1518449494696
+18/02/12 15:31:37 INFO util.Utils: /root/.ivy2/jars/net.jpountz.lz4_lz4-1.3.0.jar has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/net.jpountz.lz4_lz4-1.3.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1518449494043
+18/02/12 15:31:37 INFO client.TransportClientFactory: Successfully created connection to /172.18.0.7:42122 after 77 ms (0 ms spent in bootstraps)
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5054935557692937020.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5054935557692937020.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.spark-project.spark_unused-1.0.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.spark-project.spark_unused-1.0.0.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar with timestamp 1518449494043
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5606265530676793039.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5606265530676793039.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-streaming-kafka-0-8_2.11-2.2.0.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.slf4j_slf4j-api-1.7.16.jar with timestamp 1518449494044
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.slf4j_slf4j-api-1.7.16.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp1099402219358111902.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp1099402219358111902.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.slf4j_slf4j-api-1.7.16.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.slf4j_slf4j-api-1.7.16.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/net.jpountz.lz4_lz4-1.3.0.jar with timestamp 1518449494045
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/net.jpountz.lz4_lz4-1.3.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp7347897947971822615.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp7347897947971822615.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/net.jpountz.lz4_lz4-1.3.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/net.jpountz.lz4_lz4-1.3.0.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/com.yammer.metrics_metrics-core-2.2.0.jar with timestamp 1518449494044
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/com.yammer.metrics_metrics-core-2.2.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5836058124863428222.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5836058124863428222.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.yammer.metrics_metrics-core-2.2.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.yammer.metrics_metrics-core-2.2.0.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/com.101tec_zkclient-0.3.jar with timestamp 1518449494044
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/com.101tec_zkclient-0.3.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp4316209559501160908.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp4316209559501160908.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.101tec_zkclient-0.3.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/com.101tec_zkclient-0.3.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar with timestamp 1518449494044
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.apache.kafka_kafka-clients-0.8.2.1.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp982785539017213389.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp982785539017213389.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka-clients-0.8.2.1.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka-clients-0.8.2.1.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar with timestamp 1518449494045
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.xerial.snappy_snappy-java-1.1.2.6.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp7104707210941236259.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp7104707210941236259.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.xerial.snappy_snappy-java-1.1.2.6.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.xerial.snappy_snappy-java-1.1.2.6.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar with timestamp 1518449494043
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.apache.spark_spark-tags_2.11-2.2.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp4999059190299419928.tmp
+18/02/12 15:31:37 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp4999059190299419928.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-tags_2.11-2.2.0.jar
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.spark_spark-tags_2.11-2.2.0.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/elasticsearch-hadoop-5.0.0.jar with timestamp 1518449494042
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/elasticsearch-hadoop-5.0.0.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp3420437640547909661.tmp
+18/02/12 15:31:37 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/elasticsearch-hadoop-5.0.0.jar to class loader
+18/02/12 15:31:37 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar with timestamp 1518449494043
+18/02/12 15:31:37 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5660040777831084225.tmp
+18/02/12 15:31:38 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp5660040777831084225.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar
+18/02/12 15:31:38 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-xml_2.11-1.0.2.jar to class loader
+18/02/12 15:31:38 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar with timestamp 1518449494043
+18/02/12 15:31:38 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.apache.kafka_kafka_2.11-0.8.2.1.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp830901010685544234.tmp
+18/02/12 15:31:38 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp830901010685544234.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka_2.11-0.8.2.1.jar
+18/02/12 15:31:38 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.apache.kafka_kafka_2.11-0.8.2.1.jar to class loader
+18/02/12 15:31:38 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar with timestamp 1518449494044
+18/02/12 15:31:38 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp7795520201439126537.tmp
+18/02/12 15:31:38 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp7795520201439126537.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar
+18/02/12 15:31:38 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/org.scala-lang.modules_scala-parser-combinators_2.11-1.0.2.jar to class loader
+18/02/12 15:31:38 INFO executor.Executor: Fetching spark://172.18.0.7:42122/jars/log4j_log4j-1.2.17.jar with timestamp 1518449494044
+18/02/12 15:31:38 INFO util.Utils: Fetching spark://172.18.0.7:42122/jars/log4j_log4j-1.2.17.jar to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp2605628354713757422.tmp
+18/02/12 15:31:38 INFO util.Utils: /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/fetchFileTemp2605628354713757422.tmp has been previously copied to /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/log4j_log4j-1.2.17.jar
+18/02/12 15:31:38 INFO executor.Executor: Adding file:/tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/userFiles-12c0be6d-5188-42d9-be7d-709759acb818/log4j_log4j-1.2.17.jar to class loader
+18/02/12 15:31:38 INFO util.RecurringTimer: Started timer for BlockGenerator at time 1518449498600
+18/02/12 15:31:38 INFO receiver.BlockGenerator: Started BlockGenerator
+18/02/12 15:31:38 INFO receiver.BlockGenerator: Started block pushing thread
+18/02/12 15:31:38 INFO scheduler.ReceiverTracker: Registered receiver for stream 0 from 172.18.0.7:42122
+18/02/12 15:31:38 INFO receiver.ReceiverSupervisorImpl: Starting receiver 0
+18/02/12 15:31:38 INFO kafka.KafkaReceiver: Starting Kafka Consumer Stream with group: raw-event-streaming-consumer
+18/02/12 15:31:38 INFO kafka.KafkaReceiver: Connecting to Zookeeper: zookeeper:2181
+18/02/12 15:31:38 INFO utils.VerifiableProperties: Verifying properties
+18/02/12 15:31:38 INFO utils.VerifiableProperties: Property group.id is overridden to raw-event-streaming-consumer
+18/02/12 15:31:38 INFO utils.VerifiableProperties: Property zookeeper.connect is overridden to zookeeper:2181
+18/02/12 15:31:38 INFO utils.VerifiableProperties: Property zookeeper.connection.timeout.ms is overridden to 10000
+18/02/12 15:31:38 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], Connecting to zookeeper instance at zookeeper:2181
+18/02/12 15:31:38 INFO zkclient.ZkEventThread: Starting ZkClient event thread.
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:host.name=af76fcf0a2ad
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:java.version=1.8.0_131
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:java.home=/usr/jdk1.8.0_131/jre
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:java.class.path=/usr/spark-2.2.0/conf/:/usr/spark-2.2.0/jars/RoaringBitmap-0.5.11.jar:/usr/spark-2.2.0/jars/antlr4-runtime-4.5.3.jar:/usr/spark-2.2.0/jars/aopalliance-repackaged-2.4.0-b34.jar:/usr/spark-2.2.0/jars/arpack_combined_all-0.1.jar:/usr/spark-2.2.0/jars/avro-mapred-1.7.7-hadoop2.jar:/usr/spark-2.2.0/jars/breeze-macros_2.11-0.13.1.jar:/usr/spark-2.2.0/jars/breeze_2.11-0.13.1.jar:/usr/spark-2.2.0/jars/chill-java-0.8.0.jar:/usr/spark-2.2.0/jars/chill_2.11-0.8.0.jar:/usr/spark-2.2.0/jars/commons-codec-1.10.jar:/usr/spark-2.2.0/jars/commons-compiler-3.0.0.jar:/usr/spark-2.2.0/jars/commons-crypto-1.0.0.jar:/usr/spark-2.2.0/jars/commons-lang3-3.5.jar:/usr/spark-2.2.0/jars/commons-math3-3.4.1.jar:/usr/spark-2.2.0/jars/commons-net-2.2.jar:/usr/spark-2.2.0/jars/compress-lzf-1.0.3.jar:/usr/spark-2.2.0/jars/core-1.1.2.jar:/usr/spark-2.2.0/jars/hk2-api-2.4.0-b34.jar:/usr/spark-2.2.0/jars/hk2-locator-2.4.0-b34.jar:/usr/spark-2.2.0/jars/hk2-utils-2.4.0-b34.jar:/usr/spark-2.2.0/jars/ivy-2.4.0.jar:/usr/spark-2.2.0/jars/jackson-annotations-2.6.5.jar:/usr/spark-2.2.0/jars/jackson-core-2.6.5.jar:/usr/spark-2.2.0/jars/jackson-databind-2.6.5.jar:/usr/spark-2.2.0/jars/jackson-module-paranamer-2.6.5.jar:/usr/spark-2.2.0/jars/jackson-module-scala_2.11-2.6.5.jar:/usr/spark-2.2.0/jars/janino-3.0.0.jar:/usr/spark-2.2.0/jars/javassist-3.18.1-GA.jar:/usr/spark-2.2.0/jars/javax.annotation-api-1.2.jar:/usr/spark-2.2.0/jars/javax.inject-2.4.0-b34.jar:/usr/spark-2.2.0/jars/javax.servlet-api-3.1.0.jar:/usr/spark-2.2.0/jars/javax.ws.rs-api-2.0.1.jar:/usr/spark-2.2.0/jars/jcl-over-slf4j-1.7.16.jar:/usr/spark-2.2.0/jars/jersey-client-2.22.2.jar:/usr/spark-2.2.0/jars/jersey-common-2.22.2.jar:/usr/spark-2.2.0/jars/jersey-container-servlet-2.22.2.jar:/usr/spark-2.2.0/jars/jersey-container-servlet-core-2.22.2.jar:/usr/spark-2.2.0/jars/jersey-guava-2.22.2.jar:/usr/spark-2.2.0/jars/jersey-media-jaxb-2.22.2.jar:/usr/spark-2.2.0/jars/jersey-server-2.22.2.jar:/usr/spark-2.2.0/jars/jline-2.12.1.jar:/usr/spark-2.2.0/jars/json4s-ast_2.11-3.2.11.jar:/usr/spark-2.2.0/jars/json4s-core_2.11-3.2.11.jar:/usr/spark-2.2.0/jars/json4s-jackson_2.11-3.2.11.jar:/usr/spark-2.2.0/jars/jsr305-1.3.9.jar:/usr/spark-2.2.0/jars/jtransforms-2.4.0.jar:/usr/spark-2.2.0/jars/jul-to-slf4j-1.7.16.jar:/usr/spark-2.2.0/jars/kryo-shaded-3.0.3.jar:/usr/spark-2.2.0/jars/leveldbjni-all-1.8.jar:/usr/spark-2.2.0/jars/lz4-1.3.0.jar:/usr/spark-2.2.0/jars/machinist_2.11-0.6.1.jar:/usr/spark-2.2.0/jars/macro-compat_2.11-1.1.1.jar:/usr/spark-2.2.0/jars/mesos-1.0.0-shaded-protobuf.jar:/usr/spark-2.2.0/jars/metrics-core-3.1.2.jar:/usr/spark-2.2.0/jars/metrics-graphite-3.1.2.jar:/usr/spark-2.2.0/jars/metrics-json-3.1.2.jar:/usr/spark-2.2.0/jars/metrics-jvm-3.1.2.jar:/usr/spark-2.2.0/jars/minlog-1.3.0.jar:/usr/spark-2.2.0/jars/netty-3.9.9.Final.jar:/usr/spark-2.2.0/jars/netty-all-4.0.43.Final.jar:/usr/spark-2.2.0/jars/objenesis-2.1.jar:/usr/spark-2.2.0/jars/opencsv-2.3.jar:/usr/spark-2.2.0/jars/oro-2.0.8.jar:/usr/spark-2.2.0/jars/osgi-resource-locator-1.0.1.jar:/usr/spark-2.2.0/jars/paranamer-2.6.jar:/usr/spark-2.2.0/jars/parquet-column-1.8.2.jar:/usr/spark-2.2.0/jars/parquet-common-1.8.2.jar:/usr/spark-2.2.0/jars/parquet-encoding-1.8.2.jar:/usr/spark-2.2.0/jars/parquet-format-2.3.1.jar:/usr/spark-2.2.0/jars/parquet-hadoop-1.8.2.jar:/usr/spark-2.2.0/jars/parquet-jackson-1.8.2.jar:/usr/spark-2.2.0/jars/pmml-model-1.2.15.jar:/usr/spark-2.2.0/jars/pmml-schema-1.2.15.jar:/usr/spark-2.2.0/jars/py4j-0.10.4.jar:/usr/spark-2.2.0/jars/pyrolite-4.13.jar:/usr/spark-2.2.0/jars/scala-compiler-2.11.8.jar:/usr/spark-2.2.0/jars/scala-library-2.11.8.jar:/usr/spark-2.2.0/jars/scala-parser-combinators_2.11-1.0.4.jar:/usr/spark-2.2.0/jars/scala-reflect-2.11.8.jar:/usr/spark-2.2.0/jars/scala-xml_2.11-1.0.2.jar:/usr/spark-2.2.0/jars/scalap-2.11.8.jar:/usr/spark-2.2.0/jars/shapeless_2.11-2.3.2.jar:/usr/spark-2.2.0/jars/spark-catalyst_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-core_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-graphx_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-launcher_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-mesos_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-mllib-local_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-mllib_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-network-common_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-network-shuffle_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-repl_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-sketch_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-sql_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-streaming_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-tags_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-unsafe_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spark-yarn_2.11-2.2.0.jar:/usr/spark-2.2.0/jars/spire-macros_2.11-0.13.0.jar:/usr/spark-2.2.0/jars/spire_2.11-0.13.0.jar:/usr/spark-2.2.0/jars/stream-2.7.0.jar:/usr/spark-2.2.0/jars/univocity-parsers-2.2.1.jar:/usr/spark-2.2.0/jars/validation-api-1.1.0.Final.jar:/usr/spark-2.2.0/jars/xbean-asm5-shaded-4.4.jar:/usr/spark-2.2.0/jars/spark-streaming-kafka-0-8-assembly_2.11-2.2.0.jar:/usr/hadoop-2.8.0/etc/hadoop/:/usr/hadoop-2.8.0/etc/hadoop/*:/usr/hadoop-2.8.0/share/hadoop/common/lib/activation-1.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/asm-3.2.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/avro-1.7.4.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-codec-1.4.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-configuration-1.6.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-digester-1.8.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-io-2.4.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-lang-2.6.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/commons-net-3.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/curator-client-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/curator-framework-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/curator-recipes-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/gson-2.2.4.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/guava-11.0.2.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/hadoop-annotations-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/hadoop-auth-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/hamcrest-core-1.3.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/htrace-core4-4.0.1-incubating.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/httpclient-4.5.2.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/httpcore-4.4.4.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jcip-annotations-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jersey-core-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jersey-json-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jersey-server-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jets3t-0.9.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jettison-1.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jetty-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jetty-sslengine-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jetty-util-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jsch-0.1.51.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/json-smart-1.1.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/junit-4.11.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/mockito-all-1.8.5.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/netty-3.6.2.Final.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/nimbus-jose-jwt-3.9.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/paranamer-2.3.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/servlet-api-2.5.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/slf4j-api-1.7.10.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/stax-api-1.0-2.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/xmlenc-0.52.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/xz-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/lib/zookeeper-3.4.6.jar:/usr/hadoop-2.8.0/share/hadoop/common/hadoop-common-2.8.0-tests.jar:/usr/hadoop-2.8.0/share/hadoop/common/hadoop-common-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/common/hadoop-nfs-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/hadoop-hdfs-2.8.0-tests.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/hadoop-hdfs-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/hadoop-hdfs-client-2.8.0-tests.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/hadoop-hdfs-client-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/hadoop-hdfs-native-client-2.8.0-tests.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/hadoop-hdfs-native-client-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/hadoop-hdfs-nfs-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/asm-3.2.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/commons-io-2.4.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/hadoop-hdfs-client-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/htrace-core4-4.0.1-incubating.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/netty-all-4.0.23.Final.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/okhttp-2.4.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/okio-1.4.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/usr/hadoop-2.8.0/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/activation-1.1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/asm-3.2.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-cli-1.2.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-codec-1.4.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-collections-3.2.2.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-io-2.4.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-lang-2.6.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/commons-math-2.2.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/curator-client-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/curator-test-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/fst-2.24.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/guava-11.0.2.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/guice-3.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/javassist-3.18.1-GA.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jersey-client-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jersey-core-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jersey-json-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jersey-server-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jettison-1.1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jetty-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/jsr305-3.0.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/log4j-1.2.17.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/objenesis-2.1.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/servlet-api-2.5.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/xz-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/zookeeper-3.4.6-tests.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-api-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-client-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-common-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-registry-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-common-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-tests-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/asm-3.2.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/guice-3.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/hadoop-annotations-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/javax.inject-1.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/lib/xz-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.8.0-tests.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/activation-1.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/apacheds-i18n-2.0.0-M15.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/api-asn1-api-1.0.0-M20.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/api-util-1.0.0-M20.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/asm-3.2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/avro-1.7.4.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/aws-java-sdk-core-1.10.6.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/aws-java-sdk-kms-1.10.6.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/aws-java-sdk-s3-1.10.6.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/azure-storage-2.2.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-beanutils-1.7.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-beanutils-core-1.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-cli-1.2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-codec-1.4.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-collections-3.2.2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-compress-1.4.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-configuration-1.6.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-digester-1.8.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-httpclient-3.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-io-2.4.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-lang-2.6.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-lang3-3.3.2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-logging-1.1.3.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-math3-3.1.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/commons-net-3.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/curator-client-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/curator-framework-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/curator-recipes-2.7.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/gson-2.2.4.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/guava-11.0.2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-ant-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-archive-logs-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-archives-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-auth-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-aws-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-azure-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-datajoin-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-distcp-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-extras-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-gridmix-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-openstack-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-rumen-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-sls-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/hadoop-streaming-2.8.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/htrace-core4-4.0.1-incubating.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/httpclient-4.5.2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/httpcore-4.4.4.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jackson-annotations-2.2.3.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jackson-core-2.2.3.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jackson-core-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jackson-databind-2.2.3.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jackson-jaxrs-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jackson-mapper-asl-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jackson-xc-1.9.13.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/java-xmlbuilder-0.4.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jaxb-api-2.2.2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jaxb-impl-2.2.3-1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jcip-annotations-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jersey-core-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jersey-json-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jersey-server-1.9.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jets3t-0.9.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jettison-1.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jetty-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jetty-sslengine-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jetty-util-6.1.26.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/joda-time-2.9.4.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jsch-0.1.51.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/json-smart-1.1.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jsp-api-2.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/jsr305-3.0.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/log4j-1.2.17.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/metrics-core-3.0.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/netty-3.6.2.Final.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/nimbus-jose-jwt-3.9.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/paranamer-2.3.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/protobuf-java-2.5.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/servlet-api-2.5.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/snappy-java-1.0.4.1.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/stax-api-1.0-2.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/xmlenc-0.52.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/xz-1.0.jar:/usr/hadoop-2.8.0/share/hadoop/tools/lib/zookeeper-3.4.6.jar
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/tmp
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:os.name=Linux
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:os.arch=amd64
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:os.version=3.10.0-693.17.1.el7.x86_64
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:user.name=root
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:user.home=/root
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Client environment:user.dir=/app/submit_scripts
+18/02/12 15:31:38 INFO zookeeper.ZooKeeper: Initiating client connection, connectString=zookeeper:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@12bfa0e3
+18/02/12 15:31:38 INFO zookeeper.ClientCnxn: Opening socket connection to server zookeeper.datastreaminghub_default/172.18.0.2:2181. Will not attempt to authenticate using SASL (unknown error)
+18/02/12 15:31:38 INFO zookeeper.ClientCnxn: Socket connection established to zookeeper.datastreaminghub_default/172.18.0.2:2181, initiating session
+18/02/12 15:31:38 INFO zookeeper.ClientCnxn: Session establishment complete on server zookeeper.datastreaminghub_default/172.18.0.2:2181, sessionid = 0x1617a967b820031, negotiated timeout = 6000
+18/02/12 15:31:38 INFO zkclient.ZkClient: zookeeper state changed (SyncConnected)
+18/02/12 15:31:38 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], starting auto committer every 60000 ms
+18/02/12 15:31:38 WARN common.AppInfo$: Can't read Kafka version from MANIFEST.MF. Possible cause: java.lang.NullPointerException
+18/02/12 15:31:38 INFO kafka.KafkaReceiver: Connected to zookeeper:2181
+18/02/12 15:31:38 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], begin registering consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630 in ZK
+18/02/12 15:31:38 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], end registering consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630 in ZK
+18/02/12 15:31:38 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], starting watcher executor thread for consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630
+18/02/12 15:31:38 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], begin rebalancing consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630 try #0
+18/02/12 15:31:39 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1518449498718] Stopping leader finder thread
+18/02/12 15:31:39 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1518449498718] Stopping all fetchers
+18/02/12 15:31:39 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1518449498718] All connections stopped
+18/02/12 15:31:39 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], Cleared all relevant queues for this fetcher
+18/02/12 15:31:39 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], Cleared the data chunks in all the consumer message iterators
+18/02/12 15:31:39 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], Committing all offsets after clearing the fetcher queues
+18/02/12 15:31:39 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], Releasing partition ownership
+18/02/12 15:31:39 INFO consumer.RangeAssignor: Consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630 rebalancing the following partitions: ArrayBuffer(0) for topic emb with consumers: List(raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-0)
+18/02/12 15:31:39 INFO consumer.RangeAssignor: raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-0 attempting to claim partition 0
+18/02/12 15:31:39 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-0 successfully owned partition 0 for topic emb
+18/02/12 15:31:39 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], Consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630 selected partitions : emb:0: fetched offset = 2093: consumed offset = 2093
+18/02/12 15:31:39 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-leader-finder-thread], Starting 
+18/02/12 15:31:39 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], end rebalancing consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630 try #0
+18/02/12 15:31:39 INFO receiver.ReceiverSupervisorImpl: Called receiver 0 onStart
+18/02/12 15:31:39 INFO kafka.KafkaReceiver: Starting MessageHandler.
+18/02/12 15:31:39 INFO receiver.ReceiverSupervisorImpl: Waiting for receiver to be stopped
+18/02/12 15:31:39 INFO utils.VerifiableProperties: Verifying properties
+18/02/12 15:31:39 INFO utils.VerifiableProperties: Property client.id is overridden to raw-event-streaming-consumer
+18/02/12 15:31:39 INFO utils.VerifiableProperties: Property metadata.broker.list is overridden to kafka:9092
+18/02/12 15:31:39 INFO utils.VerifiableProperties: Property request.timeout.ms is overridden to 30000
+18/02/12 15:31:39 INFO client.ClientUtils$: Fetching metadata from broker id:1001,host:kafka,port:9092 with correlation id 0 for 1 topic(s) Set(emb)
+18/02/12 15:31:39 INFO producer.SyncProducer: Connected to kafka:9092 for producing
+18/02/12 15:31:39 INFO producer.SyncProducer: Disconnecting from kafka:9092
+18/02/12 15:31:39 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-0-1001], Starting 
+18/02/12 15:31:39 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1518449498718] Added fetcher for partitions ArrayBuffer([[emb,0], initOffset 2093 to broker id:1001,host:kafka,port:9092] )
+18/02/12 15:31:39 INFO memory.MemoryStore: Block input-0-1518449499400 stored as bytes in memory (estimated size 1254.0 B, free 912.2 MB)
+18/02/12 15:31:39 INFO storage.BlockManagerInfo: Added input-0-1518449499400 in memory on 172.18.0.7:44544 (size: 1254.0 B, free: 912.3 MB)
+18/02/12 15:31:39 WARN storage.RandomBlockReplicationPolicy: Expecting 1 replicas with only 0 peer/s.
+18/02/12 15:31:39 WARN storage.BlockManager: Block input-0-1518449499400 replicated to only 0 peer(s) instead of 1 peers
+18/02/12 15:31:39 INFO receiver.BlockGenerator: Pushed block input-0-1518449499400
+18/02/12 15:31:40 INFO scheduler.JobScheduler: Added jobs for time 1518449500000 ms
+18/02/12 15:31:40 INFO scheduler.JobGenerator: Checkpointing graph for time 1518449500000 ms
+18/02/12 15:31:40 INFO scheduler.JobScheduler: Starting job streaming job 1518449500000 ms.0 from job set of time 1518449500000 ms
+18/02/12 15:31:40 INFO streaming.DStreamGraph: Updating checkpoint data for time 1518449500000 ms
+18/02/12 15:31:40 INFO streaming.DStreamGraph: Updated checkpoint data for time 1518449500000 ms
+18/02/12 15:31:40 INFO streaming.CheckpointWriter: Submitted checkpoint of time 1518449500000 ms to writer queue
+18/02/12 15:31:40 INFO streaming.CheckpointWriter: Saving checkpoint for time 1518449500000 ms to file 'file:/app/submit_scripts/checkpoint-1518449500000'
+18/02/12 15:31:40 INFO spark.SparkContext: Starting job: runJob at PythonRDD.scala:446
+18/02/12 15:31:40 INFO scheduler.DAGScheduler: Got job 1 (runJob at PythonRDD.scala:446) with 1 output partitions
+18/02/12 15:31:40 INFO scheduler.DAGScheduler: Final stage: ResultStage 1 (runJob at PythonRDD.scala:446)
+18/02/12 15:31:40 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/02/12 15:31:40 INFO scheduler.DAGScheduler: Missing parents: List()
+18/02/12 15:31:40 INFO scheduler.DAGScheduler: Submitting ResultStage 1 (PythonRDD[3] at RDD at PythonRDD.scala:48), which has no missing parents
+18/02/12 15:31:40 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 6.6 KB, free 912.2 MB)
+18/02/12 15:31:40 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.9 KB, free 912.2 MB)
+18/02/12 15:31:40 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.18.0.7:44544 (size: 3.9 KB, free: 912.3 MB)
+18/02/12 15:31:40 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+18/02/12 15:31:40 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (PythonRDD[3] at RDD at PythonRDD.scala:48) (first 15 tasks are for partitions Vector(0))
+18/02/12 15:31:40 INFO scheduler.TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+18/02/12 15:31:40 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, executor driver, partition 0, ANY, 4744 bytes)
+18/02/12 15:31:40 INFO streaming.CheckpointWriter: Deleting file:/app/submit_scripts/checkpoint-1518442410000
+18/02/12 15:31:40 INFO executor.Executor: Running task 0.0 in stage 1.0 (TID 1)
+18/02/12 15:31:40 INFO streaming.CheckpointWriter: Checkpoint for time 1518449500000 ms saved to file 'file:/app/submit_scripts/checkpoint-1518449500000', took 8943 bytes and 96 ms
+18/02/12 15:31:40 INFO storage.BlockManager: Found block input-0-1518449499400 locally
+18/02/12 15:31:41 INFO python.PythonRunner: Times: total = 676, boot = 600, init = 75, finish = 1
+18/02/12 15:31:41 INFO python.PythonRunner: Times: total = 21, boot = 7, init = 13, finish = 1
+18/02/12 15:31:41 INFO executor.Executor: Finished task 0.0 in stage 1.0 (TID 1). 2390 bytes result sent to driver
+18/02/12 15:31:41 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 796 ms on localhost (executor driver) (1/1)
+18/02/12 15:31:41 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: ResultStage 1 (runJob at PythonRDD.scala:446) finished in 0.820 s
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Job 1 finished: runJob at PythonRDD.scala:446, took 0.890512 s
+-------------------------------------------
+Time: 2018-02-12 15:31:40
+-------------------------------------------
+['2017-02-10', '02:00:00', '869', '7.04', '28.25', '11.4', '898\r\n']
+['2017-02-10', '03:00:00', '870', '7.04', '28.24', '11.4', '898\r\n']
+['2017-02-10', '04:00:00', '870', '7.03', '28.24', '11.4', '898\r\n']
+['2017-02-10', '05:00:00', '870', '7.02', '28.24', '11.4', '901\r\n']
+['2017-02-10', '06:00:00', '870', '7.02', '28.24', '11.4', '901\r\n']
+['2017-02-10', '07:00:00', '870', '7.01', '28.25', '11.4', '901\r\n']
+['2017-02-10', '08:00:00', '870', '7.01', '28.25', '11.4', '901\r\n']
+['2017-02-10', '09:00:00', '870', '7.01', '28.25', '11.4', '901\r\n']
+['2017-02-10', '10:00:00', '871', '7.01', '28.26', '11.4', '901\r\n']
+['2017-02-10', '11:00:00', '871', '7.00', '28.25', '11.4', '901\r\n']
+...
+
+18/02/12 15:31:41 INFO scheduler.JobScheduler: Finished job streaming job 1518449500000 ms.0 from job set of time 1518449500000 ms
+18/02/12 15:31:41 INFO scheduler.JobScheduler: Starting job streaming job 1518449500000 ms.1 from job set of time 1518449500000 ms
+18/02/12 15:31:41 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+18/02/12 15:31:41 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+18/02/12 15:31:41 INFO spark.SparkContext: Starting job: saveAsTextFile at NativeMethodAccessorImpl.java:0
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Got job 2 (saveAsTextFile at NativeMethodAccessorImpl.java:0) with 1 output partitions
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Final stage: ResultStage 2 (saveAsTextFile at NativeMethodAccessorImpl.java:0)
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Missing parents: List()
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[6] at saveAsTextFile at NativeMethodAccessorImpl.java:0), which has no missing parents
+18/02/12 15:31:41 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 76.0 KB, free 912.1 MB)
+18/02/12 15:31:41 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 28.5 KB, free 912.1 MB)
+18/02/12 15:31:41 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.18.0.7:44544 (size: 28.5 KB, free: 912.2 MB)
+18/02/12 15:31:41 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[6] at saveAsTextFile at NativeMethodAccessorImpl.java:0) (first 15 tasks are for partitions Vector(0))
+18/02/12 15:31:41 INFO scheduler.TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+18/02/12 15:31:41 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, executor driver, partition 0, ANY, 4744 bytes)
+18/02/12 15:31:41 INFO executor.Executor: Running task 0.0 in stage 2.0 (TID 2)
+18/02/12 15:31:41 INFO storage.BlockManager: Found block input-0-1518449499400 locally
+18/02/12 15:31:41 INFO python.PythonRunner: Times: total = 9, boot = -556, init = 564, finish = 1
+18/02/12 15:31:41 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+18/02/12 15:31:41 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+18/02/12 15:31:41 INFO python.PythonRunner: Times: total = 18, boot = 7, init = 10, finish = 1
+18/02/12 15:31:41 INFO output.FileOutputCommitter: Saved output of task 'attempt_20180212153141_0002_m_000000_2' to file:/test_output/streaming_output/emb-1518449500000/_temporary/0/task_20180212153141_0002_m_000000
+18/02/12 15:31:41 INFO mapred.SparkHadoopMapRedUtil: attempt_20180212153141_0002_m_000000_2: Committed
+18/02/12 15:31:41 INFO executor.Executor: Finished task 0.0 in stage 2.0 (TID 2). 1380 bytes result sent to driver
+18/02/12 15:31:41 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 150 ms on localhost (executor driver) (1/1)
+18/02/12 15:31:41 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: ResultStage 2 (saveAsTextFile at NativeMethodAccessorImpl.java:0) finished in 0.152 s
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Job 2 finished: saveAsTextFile at NativeMethodAccessorImpl.java:0, took 0.270087 s
+18/02/12 15:31:41 INFO scheduler.JobScheduler: Finished job streaming job 1518449500000 ms.1 from job set of time 1518449500000 ms
+18/02/12 15:31:41 INFO scheduler.JobScheduler: Starting job streaming job 1518449500000 ms.2 from job set of time 1518449500000 ms
+18/02/12 15:31:41 INFO spark.SparkContext: Starting job: call at /usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py:2257
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Got job 3 (call at /usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py:2257) with 1 output partitions
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Final stage: ResultStage 3 (call at /usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py:2257)
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Missing parents: List()
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Submitting ResultStage 3 (PythonRDD[7] at call at /usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py:2257), which has no missing parents
+18/02/12 15:31:41 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 7.7 KB, free 912.1 MB)
+18/02/12 15:31:41 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 4.5 KB, free 912.1 MB)
+18/02/12 15:31:41 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.18.0.7:44544 (size: 4.5 KB, free: 912.2 MB)
+18/02/12 15:31:41 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (PythonRDD[7] at call at /usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py:2257) (first 15 tasks are for partitions Vector(0))
+18/02/12 15:31:41 INFO scheduler.TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+18/02/12 15:31:41 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3, localhost, executor driver, partition 0, ANY, 4744 bytes)
+18/02/12 15:31:41 INFO executor.Executor: Running task 0.0 in stage 3.0 (TID 3)
+18/02/12 15:31:41 INFO storage.BlockManager: Found block input-0-1518449499400 locally
+18/02/12 15:31:41 INFO python.PythonRunner: Times: total = 43, boot = -232, init = 275, finish = 0
+18/02/12 15:31:41 INFO python.PythonRunner: Times: total = 46, boot = -247, init = 290, finish = 3
+18/02/12 15:31:41 INFO executor.Executor: Finished task 0.0 in stage 3.0 (TID 3). 3887 bytes result sent to driver
+18/02/12 15:31:41 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 111 ms on localhost (executor driver) (1/1)
+18/02/12 15:31:41 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: ResultStage 3 (call at /usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py:2257) finished in 0.116 s
+18/02/12 15:31:41 INFO scheduler.DAGScheduler: Job 3 finished: call at /usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py:2257, took 0.138242 s
+cleaned rdd [('id', '{"tdg": 898, "water_temp": 11.4, "sec": 869, "water_level": 28.25, "date": "2017-02-10", "time": "02:00:00", "ph": 7.04}'), ('id', '{"tdg": 898, "water_temp": 11.4, "sec": 870, "water_level": 28.24, "date": "2017-02-10", "time": "03:00:00", "ph": 7.04}'), ('id', '{"tdg": 898, "water_temp": 11.4, "sec": 870, "water_level": 28.24, "date": "2017-02-10", "time": "04:00:00", "ph": 7.03}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 870, "water_level": 28.24, "date": "2017-02-10", "time": "05:00:00", "ph": 7.02}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 870, "water_level": 28.24, "date": "2017-02-10", "time": "06:00:00", "ph": 7.02}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 870, "water_level": 28.25, "date": "2017-02-10", "time": "07:00:00", "ph": 7.01}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 870, "water_level": 28.25, "date": "2017-02-10", "time": "08:00:00", "ph": 7.01}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 870, "water_level": 28.25, "date": "2017-02-10", "time": "09:00:00", "ph": 7.01}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 871, "water_level": 28.26, "date": "2017-02-10", "time": "10:00:00", "ph": 7.01}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 871, "water_level": 28.25, "date": "2017-02-10", "time": "11:00:00", "ph": 7.0}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 871, "water_level": 28.24, "date": "2017-02-10", "time": "12:00:00", "ph": 7.0}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 872, "water_level": 28.26, "date": "2017-02-10", "time": "13:00:00", "ph": 7.0}'), ('id', '{"tdg": 901, "water_temp": 11.4, "sec": 872, "water_level": 28.25, "date": "2017-02-10", "time": "14:00:00", "ph": 7.0}'), ('id', '{"tdg": 900, "water_temp": 11.4, "sec": 873, "water_level": 28.25, "date": "2017-02-10", "time": "15:00:00", "ph": 7.0}'), ('id', '{"tdg": 900, "water_temp": 11.4, "sec": 873, "water_level": 28.24, "date": "2017-02-10", "time": "16:00:00", "ph": 6.99}'), ('id', '{"tdg": 900, "water_temp": 11.4, "sec": 874, "water_level": 28.25, "date": "2017-02-10", "time": "17:00:00", "ph": 7.0}'), ('id', '{"tdg": 900, "water_temp": 11.4, "sec": 874, "water_level": 28.27, "date": "2017-02-10", "time": "18:00:00", "ph": 6.99}'), ('id', '{"tdg": 900, "water_temp": 11.4, "sec": 874, "water_level": 28.25, "date": "2017-02-10", "time": "19:00:00", "ph": 6.99}'), ('id', '{"tdg": 900, "water_temp": 11.4, "sec": 875, "water_level": 28.25, "date": "2017-02-10", "time": "20:00:00", "ph": 6.99}')]
+18/02/12 15:31:42 INFO spark.SparkContext: Starting job: take at SerDeUtil.scala:233
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Got job 4 (take at SerDeUtil.scala:233) with 1 output partitions
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Final stage: ResultStage 4 (take at SerDeUtil.scala:233)
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Missing parents: List()
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[8] at mapPartitions at SerDeUtil.scala:148), which has no missing parents
+18/02/12 15:31:42 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 8.4 KB, free 912.1 MB)
+18/02/12 15:31:42 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 4.8 KB, free 912.1 MB)
+18/02/12 15:31:42 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 172.18.0.7:44544 (size: 4.8 KB, free: 912.2 MB)
+18/02/12 15:31:42 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[8] at mapPartitions at SerDeUtil.scala:148) (first 15 tasks are for partitions Vector(0))
+18/02/12 15:31:42 INFO scheduler.TaskSchedulerImpl: Adding task set 4.0 with 1 tasks
+18/02/12 15:31:42 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4, localhost, executor driver, partition 0, ANY, 4744 bytes)
+18/02/12 15:31:42 INFO executor.Executor: Running task 0.0 in stage 4.0 (TID 4)
+18/02/12 15:31:42 INFO storage.BlockManager: Found block input-0-1518449499400 locally
+18/02/12 15:31:42 INFO python.PythonRunner: Times: total = 46, boot = -178, init = 223, finish = 1
+18/02/12 15:31:42 INFO executor.Executor: Finished task 0.0 in stage 4.0 (TID 4). 1432 bytes result sent to driver
+18/02/12 15:31:42 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 118 ms on localhost (executor driver) (1/1)
+18/02/12 15:31:42 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: ResultStage 4 (take at SerDeUtil.scala:233) finished in 0.122 s
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Job 4 finished: take at SerDeUtil.scala:233, took 0.154725 s
+18/02/12 15:31:42 WARN mr.EsOutputFormat: Speculative execution enabled for reducer - consider disabling it to prevent data corruption
+18/02/12 15:31:42 INFO spark.SparkContext: Starting job: runJob at SparkHadoopMapReduceWriter.scala:88
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Got job 5 (runJob at SparkHadoopMapReduceWriter.scala:88) with 1 output partitions
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Final stage: ResultStage 5 (runJob at SparkHadoopMapReduceWriter.scala:88)
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Missing parents: List()
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[10] at map at PythonHadoopUtil.scala:181), which has no missing parents
+18/02/12 15:31:42 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 76.2 KB, free 912.0 MB)
+18/02/12 15:31:42 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 27.0 KB, free 912.0 MB)
+18/02/12 15:31:42 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 172.18.0.7:44544 (size: 27.0 KB, free: 912.2 MB)
+18/02/12 15:31:42 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+18/02/12 15:31:42 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[10] at map at PythonHadoopUtil.scala:181) (first 15 tasks are for partitions Vector(0))
+18/02/12 15:31:42 INFO scheduler.TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+18/02/12 15:31:42 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5, localhost, executor driver, partition 0, ANY, 4744 bytes)
+18/02/12 15:31:42 INFO executor.Executor: Running task 0.0 in stage 5.0 (TID 5)
+18/02/12 15:31:42 INFO storage.BlockManager: Found block input-0-1518449499400 locally
+18/02/12 15:31:42 INFO python.PythonRunner: Times: total = 43, boot = -449, init = 491, finish = 1
+18/02/12 15:31:42 INFO util.Version: Elasticsearch Hadoop v5.0.0 [b3b70377fb]
+18/02/12 15:31:42 INFO mr.EsOutputFormat: Writing to [emb_test/emb]
+18/02/12 15:31:43 INFO storage.BlockManagerInfo: Removed broadcast_2_piece0 on 172.18.0.7:44544 in memory (size: 28.5 KB, free: 912.2 MB)
+18/02/12 15:31:43 INFO storage.BlockManagerInfo: Removed broadcast_3_piece0 on 172.18.0.7:44544 in memory (size: 4.5 KB, free: 912.2 MB)
+18/02/12 15:31:43 INFO storage.BlockManagerInfo: Removed broadcast_1_piece0 on 172.18.0.7:44544 in memory (size: 3.9 KB, free: 912.2 MB)
+18/02/12 15:31:43 INFO storage.BlockManagerInfo: Removed broadcast_4_piece0 on 172.18.0.7:44544 in memory (size: 4.8 KB, free: 912.2 MB)
+18/02/12 15:31:43 INFO python.PythonRunner: Times: total = 11, boot = 4, init = 5, finish = 2
+18/02/12 15:31:43 ERROR util.Utils: Aborting task
+org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+18/02/12 15:31:43 ERROR io.SparkHadoopMapReduceWriter: Task attempt_20180212153142_0005_r_000000_0 aborted.
+18/02/12 15:31:43 ERROR executor.Executor: Exception in task 0.0 in stage 5.0 (TID 5)
+org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+18/02/12 15:31:43 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 5.0 (TID 5, localhost, executor driver): org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+
+18/02/12 15:31:43 ERROR scheduler.TaskSetManager: Task 0 in stage 5.0 failed 1 times; aborting job
+18/02/12 15:31:43 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+18/02/12 15:31:43 INFO scheduler.TaskSchedulerImpl: Cancelling stage 5
+18/02/12 15:31:43 INFO scheduler.DAGScheduler: ResultStage 5 (runJob at SparkHadoopMapReduceWriter.scala:88) failed in 0.705 s due to Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 5, localhost, executor driver): org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+
+Driver stacktrace:
+18/02/12 15:31:43 INFO scheduler.DAGScheduler: Job 5 failed: runJob at SparkHadoopMapReduceWriter.scala:88, took 0.809181 s
+18/02/12 15:31:43 ERROR io.SparkHadoopMapReduceWriter: Aborting job job_20180212153142_0010.
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 5, localhost, executor driver): org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1499)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1487)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1486)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1486)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1714)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1669)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1658)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:630)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2022)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2043)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2075)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.write(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply$mcV$sp(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsNewAPIHadoopDataset(PairRDDFunctions.scala:1084)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply$mcV$sp(PairRDDFunctions.scala:1003)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply(PairRDDFunctions.scala:994)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply(PairRDDFunctions.scala:994)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsNewAPIHadoopFile(PairRDDFunctions.scala:994)
+	at org.apache.spark.api.python.PythonRDD$.saveAsNewAPIHadoopFile(PythonRDD.scala:839)
+	at org.apache.spark.api.python.PythonRDD.saveAsNewAPIHadoopFile(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:280)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:214)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	... 1 more
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+18/02/12 15:31:43 INFO scheduler.JobScheduler: Finished job streaming job 1518449500000 ms.2 from job set of time 1518449500000 ms
+18/02/12 15:31:43 ERROR scheduler.JobScheduler: Error running job streaming job 1518449500000 ms.2
+org.apache.spark.SparkException: An exception was raised by Python:
+Traceback (most recent call last):
+  File "/usr/spark-2.2.0/python/lib/pyspark.zip/pyspark/streaming/util.py", line 65, in call
+    r = self.func(t, *rdds)
+  File "/usr/spark-2.2.0/python/lib/pyspark.zip/pyspark/streaming/dstream.py", line 159, in <lambda>
+    func = lambda t, rdd: old_func(rdd)
+  File "/app/integration_emb_spark_app.py", line 54, in <lambda>
+    values.foreachRDD(lambda x: saveToES(x, es_conf))
+  File "/app/integration_emb_spark_app.py", line 18, in saveToES
+    valueClass="org.elasticsearch.hadoop.mr.LinkedMapWritable", conf=es_conf)
+  File "/usr/spark-2.2.0/python/lib/pyspark.zip/pyspark/rdd.py", line 1421, in saveAsNewAPIHadoopFile
+    keyConverter, valueConverter, jconf)
+  File "/usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py", line 1160, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/protocol.py", line 320, in get_return_value
+    format(target_id, ".", name), value)
+py4j.protocol.Py4JJavaError: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.saveAsNewAPIHadoopFile.
+: org.apache.spark.SparkException: Job aborted.
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.write(SparkHadoopMapReduceWriter.scala:107)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply$mcV$sp(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsNewAPIHadoopDataset(PairRDDFunctions.scala:1084)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply$mcV$sp(PairRDDFunctions.scala:1003)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply(PairRDDFunctions.scala:994)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply(PairRDDFunctions.scala:994)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsNewAPIHadoopFile(PairRDDFunctions.scala:994)
+	at org.apache.spark.api.python.PythonRDD$.saveAsNewAPIHadoopFile(PythonRDD.scala:839)
+	at org.apache.spark.api.python.PythonRDD.saveAsNewAPIHadoopFile(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:280)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:214)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 5, localhost, executor driver): org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1499)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1487)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1486)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1486)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1714)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1669)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1658)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:630)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2022)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2043)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2075)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.write(SparkHadoopMapReduceWriter.scala:88)
+	... 27 more
+Caused by: org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	... 1 more
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+
+
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:95)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Traceback (most recent call last):
+  File "/app/integration_emb_spark_app.py", line 56, in <module>
+    ssc.awaitTermination()
+  File "/usr/spark-2.2.0/python/lib/pyspark.zip/pyspark/streaming/context.py", line 206, in awaitTermination
+  File "/usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py", line 1160, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/protocol.py", line 320, in get_return_value
+    format(target_id, ".", name), value)
+py4j.protocol.Py4JJavaError: An error occurred while calling o26.awaitTermination.
+: org.apache.spark.SparkException: An exception was raised by Python:
+Traceback (most recent call last):
+  File "/usr/spark-2.2.0/python/lib/pyspark.zip/pyspark/streaming/util.py", line 65, in call
+    r = self.func(t, *rdds)
+  File "/usr/spark-2.2.0/python/lib/pyspark.zip/pyspark/streaming/dstream.py", line 159, in <lambda>
+    func = lambda t, rdd: old_func(rdd)
+  File "/app/integration_emb_spark_app.py", line 54, in <lambda>
+    values.foreachRDD(lambda x: saveToES(x, es_conf))
+  File "/app/integration_emb_spark_app.py", line 18, in saveToES
+    valueClass="org.elasticsearch.hadoop.mr.LinkedMapWritable", conf=es_conf)
+  File "/usr/spark-2.2.0/python/lib/pyspark.zip/pyspark/rdd.py", line 1421, in saveAsNewAPIHadoopFile
+    keyConverter, valueConverter, jconf)
+  File "/usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/java_gateway.py", line 1160, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/usr/local/lib/python3.4/dist-packages/py4j-0.10.6-py3.4.egg/py4j/protocol.py", line 320, in get_return_value
+    format(target_id, ".", name), value)
+py4j.protocol.Py4JJavaError: An error occurred while calling z:org.apache.spark.api.python.PythonRDD.saveAsNewAPIHadoopFile.
+: org.apache.spark.SparkException: Job aborted.
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.write(SparkHadoopMapReduceWriter.scala:107)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply$mcV$sp(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopDataset$1.apply(PairRDDFunctions.scala:1085)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsNewAPIHadoopDataset(PairRDDFunctions.scala:1084)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply$mcV$sp(PairRDDFunctions.scala:1003)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply(PairRDDFunctions.scala:994)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsNewAPIHadoopFile$2.apply(PairRDDFunctions.scala:994)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:362)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsNewAPIHadoopFile(PairRDDFunctions.scala:994)
+	at org.apache.spark.api.python.PythonRDD$.saveAsNewAPIHadoopFile(PythonRDD.scala:839)
+	at org.apache.spark.api.python.PythonRDD.saveAsNewAPIHadoopFile(PythonRDD.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:280)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:214)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 5.0 failed 1 times, most recent failure: Lost task 0.0 in stage 5.0 (TID 5, localhost, executor driver): org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1499)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1487)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1486)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1486)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:814)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:814)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1714)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1669)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1658)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:630)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2022)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2043)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2075)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.write(SparkHadoopMapReduceWriter.scala:88)
+	... 27 more
+Caused by: org.apache.spark.SparkException: Task failed while writing rows
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:178)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:89)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$3.apply(SparkHadoopMapReduceWriter.scala:88)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	... 1 more
+Caused by: org.elasticsearch.hadoop.rest.EsHadoopInvalidRequest: Found unrecoverable error [172.18.0.4:9200] returned Bad Request(400) - failed to parse [time]; Bailing out..
+	at org.elasticsearch.hadoop.rest.RestClient.processBulkResponse(RestClient.java:250)
+	at org.elasticsearch.hadoop.rest.RestClient.bulk(RestClient.java:202)
+	at org.elasticsearch.hadoop.rest.RestRepository.tryFlush(RestRepository.java:220)
+	at org.elasticsearch.hadoop.rest.RestRepository.flush(RestRepository.java:242)
+	at org.elasticsearch.hadoop.rest.RestRepository.close(RestRepository.java:267)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.doClose(EsOutputFormat.java:214)
+	at org.elasticsearch.hadoop.mr.EsOutputFormat$EsRecordWriter.close(EsOutputFormat.java:196)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:155)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$$anonfun$4.apply(SparkHadoopMapReduceWriter.scala:144)
+	at org.apache.spark.util.Utils$.tryWithSafeFinallyAndFailureCallbacks(Utils.scala:1375)
+	at org.apache.spark.internal.io.SparkHadoopMapReduceWriter$.org$apache$spark$internal$io$SparkHadoopMapReduceWriter$$executeTask(SparkHadoopMapReduceWriter.scala:159)
+	... 8 more
+
+
+	at org.apache.spark.streaming.api.python.TransformFunction.callPythonTransformFunction(PythonDStream.scala:95)
+	at org.apache.spark.streaming.api.python.TransformFunction.apply(PythonDStream.scala:78)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.api.python.PythonDStream$$anonfun$callForeachRDD$1.apply(PythonDStream.scala:179)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:51)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:416)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:50)
+	at scala.util.Try$.apply(Try.scala:192)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:39)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:257)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:256)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+
+18/02/12 15:31:43 INFO streaming.StreamingContext: Invoking stop(stopGracefully=false) from shutdown hook
+18/02/12 15:31:43 INFO scheduler.ReceiverTracker: Sent stop signal to all 1 receivers
+18/02/12 15:31:43 INFO receiver.ReceiverSupervisorImpl: Received stop signal
+18/02/12 15:31:43 INFO receiver.ReceiverSupervisorImpl: Stopping receiver with message: Stopped by driver: 
+18/02/12 15:31:43 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], ZKConsumerConnector shutting down
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1518449498718] Stopping leader finder thread
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-leader-finder-thread], Shutting down
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-leader-finder-thread], Stopped 
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherManager$LeaderFinderThread: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-leader-finder-thread], Shutdown completed
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1518449498718] Stopping all fetchers
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-0-1001], Shutting down
+18/02/12 15:31:43 INFO consumer.SimpleConsumer: Reconnect due to socket error: java.nio.channels.ClosedByInterruptException
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-0-1001], Shutdown completed
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherThread: [ConsumerFetcherThread-raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630-0-1001], Stopped 
+18/02/12 15:31:43 INFO consumer.ConsumerFetcherManager: [ConsumerFetcherManager-1518449498718] All connections stopped
+18/02/12 15:31:43 INFO zkclient.ZkEventThread: Terminate ZkClient event thread.
+18/02/12 15:31:43 INFO zookeeper.ZooKeeper: Session: 0x1617a967b820031 closed
+18/02/12 15:31:43 INFO zookeeper.ClientCnxn: EventThread shut down
+18/02/12 15:31:43 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], ZKConsumerConnector shutdown completed in 46 ms
+18/02/12 15:31:43 INFO receiver.ReceiverSupervisorImpl: Called receiver onStop
+18/02/12 15:31:43 INFO receiver.ReceiverSupervisorImpl: Deregistering receiver 0
+18/02/12 15:31:43 ERROR scheduler.ReceiverTracker: Deregistered receiver for stream 0: Stopped by driver
+18/02/12 15:31:43 INFO receiver.ReceiverSupervisorImpl: Stopped receiver 0
+18/02/12 15:31:43 INFO receiver.BlockGenerator: Stopping BlockGenerator
+18/02/12 15:31:43 INFO util.RecurringTimer: Stopped timer for BlockGenerator after time 1518449503800
+18/02/12 15:31:43 INFO receiver.BlockGenerator: Waiting for block pushing thread to terminate
+18/02/12 15:31:43 INFO receiver.BlockGenerator: Pushing out the last 0 blocks
+18/02/12 15:31:43 INFO receiver.BlockGenerator: Stopped block pushing thread
+18/02/12 15:31:43 INFO receiver.BlockGenerator: Stopped BlockGenerator
+18/02/12 15:31:43 INFO receiver.ReceiverSupervisorImpl: Stopped receiver without error
+18/02/12 15:31:43 INFO executor.Executor: Finished task 0.0 in stage 0.0 (TID 0). 751 bytes result sent to driver
+18/02/12 15:31:43 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 6756 ms on localhost (executor driver) (1/1)
+18/02/12 15:31:43 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+18/02/12 15:31:43 INFO scheduler.DAGScheduler: ResultStage 0 (start at NativeMethodAccessorImpl.java:0) finished in 6.777 s
+18/02/12 15:31:43 INFO scheduler.ReceiverTracker: All of the receivers have deregistered successfully
+18/02/12 15:31:43 INFO util.BatchedWriteAheadLog: BatchedWriteAheadLog shutting down at time: 1518449503830.
+18/02/12 15:31:43 WARN util.BatchedWriteAheadLog: BatchedWriteAheadLog Writer queue interrupted.
+18/02/12 15:31:43 INFO util.BatchedWriteAheadLog: BatchedWriteAheadLog Writer thread exiting.
+18/02/12 15:31:43 INFO util.FileBasedWriteAheadLog_ReceivedBlockTracker: Stopped write ahead log manager
+18/02/12 15:31:43 INFO scheduler.ReceiverTracker: ReceiverTracker stopped
+18/02/12 15:31:43 INFO scheduler.JobGenerator: Stopping JobGenerator immediately
+18/02/12 15:31:43 INFO util.RecurringTimer: Stopped timer for JobGenerator after time 1518449500000
+18/02/12 15:31:43 INFO streaming.CheckpointWriter: CheckpointWriter executor terminated? true, waited for 0 ms.
+18/02/12 15:31:43 INFO scheduler.JobGenerator: Stopped JobGenerator
+18/02/12 15:31:43 INFO scheduler.JobScheduler: Stopped JobScheduler
+18/02/12 15:31:43 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@5cf02630{/streaming,null,UNAVAILABLE,@Spark}
+18/02/12 15:31:43 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@464796ba{/streaming/batch,null,UNAVAILABLE,@Spark}
+18/02/12 15:31:44 INFO consumer.ZookeeperConsumerConnector: [raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630], stopping watcher executor thread for consumer raw-event-streaming-consumer_af76fcf0a2ad-1518449498589-90cfd630
+18/02/12 15:31:44 INFO handler.ContextHandler: Stopped o.s.j.s.ServletContextHandler@220e97f6{/static/streaming,null,UNAVAILABLE,@Spark}
+18/02/12 15:31:44 INFO storage.BlockManagerInfo: Removed broadcast_0_piece0 on 172.18.0.7:44544 in memory (size: 24.4 KB, free: 912.3 MB)
+18/02/12 15:31:44 INFO streaming.StreamingContext: StreamingContext stopped successfully
+18/02/12 15:31:44 INFO spark.SparkContext: Invoking stop() from shutdown hook
+18/02/12 15:31:44 INFO storage.BlockManagerInfo: Removed broadcast_5_piece0 on 172.18.0.7:44544 in memory (size: 27.0 KB, free: 912.3 MB)
+18/02/12 15:31:44 INFO server.AbstractConnector: Stopped Spark@6b9bc9ee{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+18/02/12 15:31:44 INFO ui.SparkUI: Stopped Spark web UI at http://192.171.148.207:4040
+18/02/12 15:31:44 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+18/02/12 15:31:44 INFO memory.MemoryStore: MemoryStore cleared
+18/02/12 15:31:44 INFO storage.BlockManager: BlockManager stopped
+18/02/12 15:31:44 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+18/02/12 15:31:44 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+18/02/12 15:31:44 INFO spark.SparkContext: Successfully stopped SparkContext
+18/02/12 15:31:44 INFO util.ShutdownHookManager: Shutdown hook called
+18/02/12 15:31:44 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6
+18/02/12 15:31:44 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-24160fab-e6c1-4454-909e-c644b4ccafe6/pyspark-b21fc329-ea67-459c-84d8-bc2320140197

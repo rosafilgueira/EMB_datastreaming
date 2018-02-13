@@ -1,0 +1,1 @@
+$SPARK_HOME/bin/spark-submit --master local[8] --packages org.apache.spark:spark-streaming-kafka-0-8_2.11:2.2.0 $SPARK_HOME/examples/src/main/python/streaming/kafka_wordcount.py 192.5.87.53:2181 word_count
