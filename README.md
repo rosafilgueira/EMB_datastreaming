@@ -86,13 +86,14 @@ Iniside the container
  Two options to submit an application: 
 
   7.A) Inside the container:
-  	 ```
+  
+        ```
 	7.A.1 cd /app/submit_scripts ( pyspark application is at /app)
 	7.A.2 ./submit_emb_local.sh (LOCALLY) or ./submit_emb_spark.sh (MASTER-CLUSTER)
 	```
  7.B) Outside the container (using the MASTER-CLUSTER): 
  
- 	 ```
+ 	```
 	start_pyspark_app.sh
    	```
 
