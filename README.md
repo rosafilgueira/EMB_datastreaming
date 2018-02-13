@@ -87,22 +87,21 @@ cd /opt/create-index
  ```
  
  Two options to submit an application: 
-
   7.A) Inside the container:
   
   ```
   7.A.1 cd /app/submit_scripts ( pyspark application is at /app)
   7.A.2 ./submit_emb_local.sh (locally version) or ./submit_emb_spark.sh (master-cluster version)
   ```
- 7.B) Outside the container (using the master-cluster version): 
+  7.B) Outside the container (using the master-cluster version): 
  
- ```
- start_pyspark_app.sh
- ```
+  ```
+  start_pyspark_app.sh
+  ```
 
-8. Checking/Getting data/values Elastisearch:
+ 8. Checking/Getting data/values Elastisearch:
 
-Two options:
+ Two options:
    Inside the elasticsearch container:
 	
   ```
@@ -111,7 +110,7 @@ Two options:
    ./check_values.sh
   ```
 	
-   Outside the container: 
+ Outside the container: 
 	
 ```
 curl -XGET 'IP-Address:9200/emb_test/_mapping/emb?pretty=1'
