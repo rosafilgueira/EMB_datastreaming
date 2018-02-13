@@ -1,13 +1,13 @@
 # UIs:
-	Hadoop: http://192.5.87.53:50070/
-	Datanode: http://192.5.87.53:50075
-	Spark-Jobs: http://192.5.87.53:4040
-	Spark-Notebook: http://192.5.87.53:8888
-	Spark-Master: http://192.5.87.53:8080
-	Spark-Worker: http://192.5.87.53:8081
-	ElasticSearch: http://192.5.87.53:9200
-	Kibana: http://192.5.87.53:5601
-	Hue: http://192.5.87.53:8088
+	Hadoop: http://IP-address:50070/
+	Datanode: http://IP-address:50075
+	Spark-Jobs: http://IP-address:4040
+	Spark-Notebook: http://IP-address:8888
+	Spark-Master: http://IP-address:8080
+	Spark-Worker: http://IP-address:8081
+	ElasticSearch: http://IP-address:9200
+	Kibana: http://IP-address:5601
+	Hue: http://IP-address:8088
 
 
 # Software
@@ -21,60 +21,88 @@
 
 # How to use DataStreaming Hub
 
-0. To set up docker and docker-compose enviroment in the Centos7 VM  
+(0.)  If you start from a 'clean'/'new' Centos7 VM --> You need to set up docker and docker-compose enviroment  
 
 ```
    ./config.sh 
 
 ```
 
-1. >> sudo docker-compose up
- DESCRIPTION: upload the dockerized architecture 	
- (open a new tab - because the current one will be using for the docker-logs)
+1. Upload the dockerized architecture-  (open a new tab - because the current one will be using for the docker-logs)
 
-2. >> sudo docker-compose ps
- DESCRIPTION: check if all the conatiners are up and running
+```
+ sudo docker-compose up
+```
 
-3. >> /create-topic.sh kafka zookeeper:2181 emb
- DESCRIPTION: create the 'emb' topic for our application 
+2. Check if all the conatiners are up and running
 
-4. >> sudo docker exec -it spark-worker bash
- DESCRIPTION: start to produce streams of EMB data to the 'emb' topic - 1 stream per line and file	
-	Inside the container:
-	 4.1 >> cd /scripts
-	 4.2 >> ./publish_emb.sh
+```
+	sudo docker-compose ps
+```
 
-  (open a new tab - this one will be used for producing the streams to 'emb' topic)
+3. Create the 'emb' topic for our application 
 
-5. >> ./receive-topic.sh kafka emb zookeeper:2181
- DESCRIPTION: check if the streams can be receive from the 'emb' topic
+```
+./create-topic.sh kafka zookeeper:2181 emb
+```
 
-6. >>  sudo docker exec -it elasticsearch bash
-  DESCRIPTION: check if the elasticsearch has been correctly created 
-     Iniside the container:
-	6.1 >> cd /opt/create-index
-	6.2 >> ./check_index.sh
-	6.3 >> ./check_values.sh
+4. Start to produce streams of EMB data to the 'emb' topic - 1 stream per line and file	-
+(open a new tab - this one will be used for producing the streams to 'emb' topic)
+```
+sudo docker exec -it spark-worker bash
+```
+Inside the container:
+	```
+	cd /scripts
+	./publish_emb.sh
+	```
 
- (open new tab - this one will be used for searching data in elasticsearch)
+5. Check if the streams can be receive from the 'emb' topic
+```
+./receive-topic.sh kafka emb zookeeper:2181
+```
 
- 7. >> sudo docker exec -it spark-master bash
- DESCRIPTION: Start the apache spark application (locally/cluster) that receives stream from Kafka and store them in elasticsearch
+6. Check if the elasticsearch has been correctly created -  
+(open new tab - this one will be used for searching data in elasticsearch)
+```
+sudo docker exec -it elasticsearch bash
+```
+Iniside the container
+	```
+	cd /opt/create-index
+	./check_index.sh
+	./check_values.sh
+	```
 
-  Inside the container:
-	7.1 >> cd /app/submit_scripts ( pyspark application is at /app)
-	7.2 >> ./submit_emb_local.sh  or ./submit_emb_spark.sh
+ 7. Start the apache spark application (locally/cluster) that receives stream from Kafka and store them in elasticsearch
+ ```
+ sudo docker exec -it spark-master bash
+ ```
+ Two options to submit an application: 
 
+  7.A) Inside the container:
+  	 ```
+	7.A.1 cd /app/submit_scripts ( pyspark application is at /app)
+	7.A.2 ./submit_emb_local.sh (LOCALLY) or ./submit_emb_spark.sh (MASTER-CLUSTER)
+	```
+ 7.B) Outside the container (using the MASTER-CLUSTER): 
+ 	 ```
+	start_pyspark_app.sh
+   	```
 
-8. Inside the elasticsearch container
-	8.1 >> ./check_values.sh
+8. Checking/Getting data/values Elastisearch:
 
-9. >> start_pyspark_app.sh
-  DESCRIPTION: Submit the spark application from outside the spark-master container (using the 'cluster' version)
-
-
-10. >>  curl -XGET '192.171.148.207:9200/emb_test/_mapping/emb?pretty=1'
-  DESCRIPTION: Check elastic search from outside the elastic container	
+Two options:
+	Inside the elasticsearch container:
+	```
+	sudo docker exec -it elasticsearch bash
+	cd /opt/create-index
+	./check_values.sh
+	```
+	Outside the container: 
+	```
+	curl -XGET '192.171.148.207:9200/emb_test/_mapping/emb?pretty=1'
+	```
 	
 
 
