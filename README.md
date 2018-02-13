@@ -53,6 +53,7 @@
 sudo docker exec -it spark-worker bash
 ```
 Inside the container:
+
 	```
 	cd /scripts
 	./publish_emb.sh
