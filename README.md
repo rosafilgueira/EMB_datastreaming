@@ -7,7 +7,6 @@
 	Spark-Worker: http://IP-address:8081
 	ElasticSearch: http://IP-address:9200
 	Kibana: http://IP-address:5601
-	Hue: http://IP-address:8088
 
 
 # Software
@@ -19,7 +18,13 @@
 |Spark    	|2.2.0		       |
 |Hadoop	        |1.1.0-hadoop2.8       |
 
-# How to use DataStreaming Hub
+
+# Use Case
+
+![Figure use case](https://github.com/rosafilgueira/EMB_datastreaming/blob/master/Sensor-Figure.png)
+
+
+# How to use EMB_datastreaming Hub
 
 (0.)  If you start from a 'clean'/'new' Centos7 VM --> You need to set up docker and docker-compose enviroment  
 
