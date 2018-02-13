@@ -26,6 +26,9 @@
 
 # How to use EMB_datastreaming Hub
 
+
+![Figure architecture](https://github.com/rosafilgueira/EMB_datastreaming/blob/master/data-streaming_hub.png )
+
 (0.)  If you start from a 'clean'/'new' Centos7 VM --> You need to set up docker and docker-compose enviroment  
 
 ```
