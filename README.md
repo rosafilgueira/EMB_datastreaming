@@ -37,7 +37,7 @@
 2. Check if all the conatiners are up and running
 
 ```
-	sudo docker-compose ps
+sudo docker-compose ps
 ```
 
 3. Create the 'emb' topic for our application 
@@ -54,12 +54,13 @@ sudo docker exec -it spark-worker bash
 ```
 Inside the container:
 
-	```
-	cd /scripts
-	./publish_emb.sh
-	```
+```
+cd /scripts
+./publish_emb.sh
+```
 
 5. Check if the streams can be receive from the 'emb' topic
+
 ```
 ./receive-topic.sh kafka emb zookeeper:2181
 ```
@@ -73,11 +74,11 @@ sudo docker exec -it elasticsearch bash
 
 Iniside the container
 
-	```
-	cd /opt/create-index
-	./check_index.sh
-	./check_values.sh
-	```
+```
+cd /opt/create-index
+./check_index.sh
+./check_values.sh
+```
 
  7. Start the apache spark application (locally option /master-cluster option) that receives stream from Kafka and store them in elasticsearch
  
@@ -89,32 +90,32 @@ Iniside the container
 
   7.A) Inside the container:
   
-        ```
-	7.A.1 cd /app/submit_scripts ( pyspark application is at /app)
-	7.A.2 ./submit_emb_local.sh (locally version) or ./submit_emb_spark.sh (master-cluster version)
-	```
+  ```
+  7.A.1 cd /app/submit_scripts ( pyspark application is at /app)
+  7.A.2 ./submit_emb_local.sh (locally version) or ./submit_emb_spark.sh (master-cluster version)
+  ```
  7.B) Outside the container (using the master-cluster version): 
  
- 	```
-	start_pyspark_app.sh
-   	```
+ ```
+ start_pyspark_app.sh
+ ```
 
 8. Checking/Getting data/values Elastisearch:
 
 Two options:
    Inside the elasticsearch container:
 	
-	```
-	sudo docker exec -it elasticsearch bash
-	cd /opt/create-index
-	./check_values.sh
-	```
+  ```
+   sudo docker exec -it elasticsearch bash
+   cd /opt/create-index
+   ./check_values.sh
+  ```
 	
    Outside the container: 
 	
-	```
-	curl -XGET 'IP-Address:9200/emb_test/_mapping/emb?pretty=1'
-	```
+```
+curl -XGET 'IP-Address:9200/emb_test/_mapping/emb?pretty=1'
+```
 	
 
 
