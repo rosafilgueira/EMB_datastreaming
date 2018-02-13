@@ -83,6 +83,7 @@ Iniside the container
  ```
  sudo docker exec -it spark-master bash
  ```
+ 
  Two options to submit an application: 
 
   7.A) Inside the container:
@@ -100,14 +101,16 @@ Iniside the container
 8. Checking/Getting data/values Elastisearch:
 
 Two options:
-	Inside the elasticsearch container:
+   Inside the elasticsearch container:
 	
 	```
 	sudo docker exec -it elasticsearch bash
 	cd /opt/create-index
 	./check_values.sh
 	```
-	Outside the container: 
+	
+   Outside the container: 
+	
 	```
 	curl -XGET '192.171.148.207:9200/emb_test/_mapping/emb?pretty=1'
 	```
