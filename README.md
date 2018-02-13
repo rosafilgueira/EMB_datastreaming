@@ -69,6 +69,7 @@ Inside the container:
 ```
 sudo docker exec -it elasticsearch bash
 ```
+
 Iniside the container
 	```
 	cd /opt/create-index
