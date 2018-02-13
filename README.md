@@ -77,6 +77,20 @@ cd /scripts
 (open new tab - this one will be used for searching data in elasticsearch)
 
 ```
+-index: emb_test
+-type: emb
+- Fields: 
+	date" : { "type" : "text"},
+        "time" : { "type" : "text"},
+        "sec": { "type" : "integer"},
+        "ph": { "type" : "float"},
+        "water_level": { "type" : "float"},
+        "water_temp": { "type" : "float"},
+	"tdg": { "type" : "integer"}
+	
+```	
+
+```
 sudo docker exec -it elasticsearch bash
 ```
 
