@@ -113,7 +113,7 @@ Two options:
    Outside the container: 
 	
 	```
-	curl -XGET '192.171.148.207:9200/emb_test/_mapping/emb?pretty=1'
+	curl -XGET 'IP-Address:9200/emb_test/_mapping/emb?pretty=1'
 	```
 	
 
