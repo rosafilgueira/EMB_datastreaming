@@ -54,7 +54,8 @@ sudo docker-compose ps
 ./create-topic.sh kafka zookeeper:2181 emb
 ```
 
-4. Start to produce streams of EMB data to the 'emb' topic - 1 stream per line and file	-
+4. Start to produce streams of EMB data to the 'emb' topic - 1 stream per line and file. We add the sensor_id to each line, so we know from which sensor the data is been streamed from. 
+
 (open a new tab - this one will be used for producing the streams to 'emb' topic)
 
 ```
@@ -80,13 +81,14 @@ cd /scripts
 -index: emb_test
 -type: emb
 -fields: 
-	date" : { "type" : "text"}
-        "time" : { "type" : "text"}
+	date" : { "type" : "date", "format":"yyyy-MM-dd"}
+        "time" : { "type" : "date", "format": "HH:mm:ss"}
         "sec": { "type" : "integer"}
         "ph": { "type" : "float"}
         "water_level": { "type" : "float"}
         "water_temp": { "type" : "float"}
 	"tdg": { "type" : "integer"}
+	"qc": {type:text}
 	
 ```	
 
@@ -135,8 +137,9 @@ cd /opt/create-index
  Outside the container: 
 	
 ```
-curl -XGET 'IP-Address:9200/emb_test/_mapping/emb?pretty=1'
+curl -XGET 'locahost:9200/emb_test/_mapping/emb?pretty=1'
 ```
+  Or you could run the examples_elasticsearch_querires
 	
 
 
