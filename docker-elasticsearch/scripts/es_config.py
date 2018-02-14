@@ -31,8 +31,9 @@ nb_retry_max=10                     # Number of allowed retries when loading a d
 mapping={ "_routing":{ "required":False },
           "_all": { "enabled": True },
           "properties" : {
-             "date" : { "type" : "text"},
-             "time" : { "type" : "text"},
+	     "sensor_id": {"type": "text"},
+             "date" : { "type" : "date", "format":"yyyy-MM-dd"},
+             "time" : { "type" : "date", "format":"HH:mm:ss"},
              "sec": { "type" : "integer"},
              "ph": { "type" : "float"},
              "water_level": { "type" : "float"},
