@@ -38,7 +38,8 @@ mapping={ "_routing":{ "required":False },
              "ph": { "type" : "float"},
              "water_level": { "type" : "float"},
              "water_temp": { "type" : "float"},
-             "tdg": { "type" : "integer"}
+             "tdg": { "type" : "integer"},
+	     "qc": {"type": "text"},
           }
       }
 
