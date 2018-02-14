@@ -7,8 +7,8 @@ from pyspark.streaming import StreamingContext
 from pyspark.streaming.kafka import KafkaUtils
 import json
 
-def saveToES(rdd, es_conf):
-    rdd_es = rdd.map(lambda x: [e for e in x]).map(lambda e: json.dumps({'date': e[0], 'time': e[1], 'sec':int(e[2]), 'ph':float(e[3]), 'water_level':float(e[4]), 'water_temp':float(e[5]), 'tdg':int(e[6].split("\r")[0])})).map(lambda x: ('id', x))
+def saveToES(rdd, es_conf, sensor):
+    rdd_es = rdd.map(lambda x: [e for e in x]).map(lambda e: json.dumps({'date': e[0], 'time': e[1], 'sec':int(e[2]), 'ph':float(e[3]), 'water_level':float(e[4]), 'water_temp':float(e[5]), 'tdg':int(e[6].split("\r")[0]), 'sensor_id': sensor})).map(lambda x: ('id', x))
     print("cleaned rdd %s" % rdd_es.collect())	
 
     rdd_es.saveAsNewAPIHadoopFile(
@@ -30,6 +30,7 @@ if __name__ == "__main__":
     parser.add_argument('--es_host', default='elasticsearch', required=True)
     parser.add_argument('--es_port', default='9200', required=True)
     parser.add_argument('--output', required=True)
+    parser.add_argument('--sensor_id', required=True)
     args = parser.parse_args()
 
     es_conf = {"es.nodes": args.es_host,
@@ -51,6 +52,7 @@ if __name__ == "__main__":
     values = lines.map(lambda line: line.split(","))
     values.pprint()
     values.saveAsTextFiles(args.output)
-    values.foreachRDD(lambda x: saveToES(x, es_conf))
+    sensor = args.sensor_id
+    values.foreachRDD(lambda x: saveToES(x, es_conf, sensor))
     ssc.start()
     ssc.awaitTermination()
