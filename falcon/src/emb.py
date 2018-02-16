@@ -7,9 +7,7 @@ from kafka import KafkaProducer
 
 class BdrResource:
     def on_post(self, req, resp):
-	print('On post req %s' % req)
 	msg = json.dumps(req.context['doc'], encoding='utf-8')
-	print('Brd falcoln %s' % msg)
         producer = KafkaProducer(bootstrap_servers='kafka:9092')
         producer.send('emb', msg)
         producer.flush()
