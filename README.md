@@ -58,7 +58,7 @@ sudo docker-compose ps
 Start producing streams to the 'emb' topic - 1 stream per line and file. We have added the sensor_id to each line, so we know from which sensor the data is been streamed from. 
 
 * 4.1 Using websevices - Falcon (recommended option):
-  In a terminal, go to the "sensordata" folder and start a feeder script POSTing messages to Falcon:
+  In a new terminal start a feeder script POSTing messages to Falcon:
   
   ```
   cd sensordata
@@ -68,7 +68,7 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
 
  
 * 4.2 Using a python script:
-  In a terminal, type the following command to enter inside the spark-worker container:
+  In a new terminal, type the following command to enter inside the spark-worker container:
 
   ```
   sudo docker exec -it spark-worker bash
@@ -78,7 +78,7 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
   ```
   cd /scripts
   ./publish_emb.sh
- ```
+  ```
 
 5. Check if the streams can be receive from the 'emb' topic
 
