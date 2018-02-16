@@ -54,19 +54,26 @@ sudo docker-compose ps
 ./create-topic.sh kafka zookeeper:2181 emb
 ```
 
-4. Start to produce streams of EMB data to the 'emb' topic - 1 stream per line and file. We add the sensor_id to each line, so we know from which sensor the data is been streamed from. 
+4. Simulation of readings from sensors. 
+Start producing streams to the 'emb' topic - 1 stream per line and file. We have added the sensor_id to each line, so we know from which sensor the data is been streamed from. 
 
-(open a new tab - this one will be used for producing the streams to 'emb' topic)
+* 4.1 Using websevices - Falcon (recommended option):
+  In a terminal, go to the "sensordata" folder and start a feeder script POSTing messages to Falcon: ./sensor-simulator.py
+  Falcoln sends the data to Kafka using a post request (you could check the post request in Falcoln/src/emb.py )
 
-```
-sudo docker exec -it spark-worker bash
-```
-Inside the container:
+ 
+* 4.2 Using a python script:
+  In a terminal, type the following command to enter inside the spark-worker container:
 
-```
-cd /scripts
-./publish_emb.sh
-```
+  ```
+  sudo docker exec -it spark-worker bash
+  ```
+  Inside the container, the publish_emb.sh calls the producer_kafka.py to send data directly to Kafka (you could check pyspark_app/scripts   /producer_kakfa.py):
+ 
+  ```
+  cd /scripts
+  ./publish_emb.sh
+ ```
 
 5. Check if the streams can be receive from the 'emb' topic
 
