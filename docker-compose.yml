@@ -1,5 +1,11 @@
 version: '2'
 services:
+  falcon:
+    build: ./falcon
+    ports:
+     - "8000:8000"
+    links:
+     - kafka
   zookeeper:
     image: wurstmeister/zookeeper
     hostname: zookeeper

@@ -2,5 +2,4 @@ falcon
 gunicorn
 falconjsonio
 kafka-python
-cassandra-driver
 
