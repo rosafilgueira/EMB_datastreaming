@@ -58,11 +58,11 @@ sudo docker-compose ps
 Start producing streams to the 'emb' topic - 1 stream per line and file. We have added the sensor_id to each line, so we know from which sensor the data is been streamed from. 
 
 * 4.1 Using websevices - Falcon (recommended option):
-  In a new terminal start a feeder script POSTing messages to Falcon:
+  In a new terminal start a feeder script POSTing messages to Falcon. With -s you can indicate which sensor you want to stream data from:
   
   ```
   cd sensordata
-  ./sensor-simulator.py
+  ./sensor-simulator.py -s emb3
   ```
   Falcoln sends the data to Kafka using a post request (you could check the post request in Falcoln/src/emb.py )
 
