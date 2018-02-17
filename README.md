@@ -58,11 +58,12 @@ sudo docker-compose ps
 Start producing streams to the 'emb' topic - 1 stream per line and file. We have added the sensor_id to each line, so we know from which sensor the data is been streamed from. 
 
 * 4.1 Using websevices - Falcon (recommended option):
-  In a new terminal start a feeder script POSTing messages to Falcon:
+  In a new terminal start a feeder script POSTing messages to Falcon. With -s you can indicate which sensor you want to stream data from.
+  We have locally stored data from 'emb3' and 'emb2' sensors. 
   
   ```
   cd sensordata
-  ./sensor-simulator.py
+  ./sensor-simulator.py -s emb3
   ```
   Falcoln sends the data to Kafka using a post request (you could check the post request in Falcoln/src/emb.py )
 
@@ -73,7 +74,7 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
   ```
   sudo docker exec -it spark-worker bash
   ```
-  Inside the container, the publish_emb.sh calls the producer_kafka.py to send data directly to Kafka (you could check pyspark_app/scripts   /producer_kakfa.py):
+  Inside the container, the publish_emb.sh calls the producer_kafka.py to send data directly to Kafka (you could check pyspark_app/scripts   /producer_kakfa.py). You could change the publish_emb.sh script to stream data from a different sensor. By default, we have choosen emb3:
  
   ```
   cd /scripts
@@ -93,14 +94,14 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
 -index: emb_test
 -type: emb
 -fields: 
-	date" : { "type" : "date", "format":"yyyy-MM-dd"}
-        "time" : { "type" : "date", "format": "HH:mm:ss"}
-        "sec": { "type" : "integer"}
+	date" : { "type" : "date", "format":"yyyy-MM-dd"} (UTC)
+        "time" : { "type" : "date", "format": "HH:mm:ss"} (UTC)
+        "sec": { "type" : "integer"} ->  (micro-siemens per centimetre) 
         "ph": { "type" : "float"}
-        "water_level": { "type" : "float"}
-        "water_temp": { "type" : "float"}
-	"tdg": { "type" : "integer"}
-	"qc": {type:text}
+        "water_level": { "type" : "float"} --> Water Level aOD (metre) 
+        "water_temp": { "type" : "float"} --> Water Temperature (Celsius) 
+	"tdg": { "type" : "integer"} -->  TDG (millibar) 
+	"qc": {type:text} --> QualityControl 
 	
 ```	
 
