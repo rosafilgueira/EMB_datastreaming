@@ -94,14 +94,14 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
 -index: emb_test
 -type: emb
 -fields: 
-	date" : { "type" : "date", "format":"yyyy-MM-dd"}
-        "time" : { "type" : "date", "format": "HH:mm:ss"}
-        "sec": { "type" : "integer"}
+	date" : { "type" : "date", "format":"yyyy-MM-dd"} (UTC)
+        "time" : { "type" : "date", "format": "HH:mm:ss"} (UTC)
+        "sec": { "type" : "integer"} ->  (micro-siemens per centimetre) 
         "ph": { "type" : "float"}
-        "water_level": { "type" : "float"}
-        "water_temp": { "type" : "float"}
-	"tdg": { "type" : "integer"}
-	"qc": {type:text}
+        "water_level": { "type" : "float"} --> Water Level aOD (metre) 
+        "water_temp": { "type" : "float"} --> Water Temperature (Celsius) 
+	"tdg": { "type" : "integer"} -->  TDG (millibar) 
+	"qc": {type:text} --> QualityControl 
 	
 ```	
 
