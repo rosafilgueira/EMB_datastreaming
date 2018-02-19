@@ -41,13 +41,13 @@
 1. Upload the dockerized architecture-  (open a new tab - because the current one will be using for the docker-logs)
 
 ```
- sudo docker-compose up
+docker-compose up
 ```
 
 2. Check if all the conatiners are up and running
 
 ```
-sudo docker-compose ps
+docker-compose ps
 ```
 
 3. Create the 'emb' topic for our application 
@@ -74,7 +74,7 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
   In a new terminal, type the following command to enter inside the spark-worker container:
 
   ```
-  sudo docker exec -it spark-worker bash
+  docker exec -it spark-worker bash
   ```
   Inside the container, the publish_emb.sh calls the producer_kafka.py to send data directly to Kafka (you could check pyspark_app/scripts   /producer_kakfa.py). You could change the publish_emb.sh script to stream data from a different sensor. By default, we have choosen emb3:
  
@@ -122,7 +122,7 @@ cd /opt/create-index
 7. Start the apache spark application (locally option /master-cluster option) that receives streams from Kafka (listening 'emb' topic) and store them in elasticsearch (index emb_test, type: emb)
  
  ```
- sudo docker exec -it spark-master bash
+ docker exec -it spark-master bash
  ```
  
  Two options to submit an application: 
@@ -144,7 +144,7 @@ cd /opt/create-index
    Inside the elasticsearch container:
 	
   ```
-   sudo docker exec -it elasticsearch bash
+   docker exec -it elasticsearch bash
    cd /opt/create-index
    ./check_values.sh
   ```
