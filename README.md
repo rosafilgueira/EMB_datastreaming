@@ -95,7 +95,8 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
 ```
 -index: emb_test
 -type: emb
--fields: 
+-fields:
+        "sensor_id": {"type": "text"}, (Id of the sensor: e.g. emb2, emb3)
 	date" : { "type" : "date", "format":"yyyy-MM-dd"} (UTC)
         "time" : { "type" : "date", "format": "HH:mm:ss"} (UTC)
         "sec": { "type" : "integer"} ->  (micro-siemens per centimetre) 
