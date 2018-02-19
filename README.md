@@ -108,7 +108,7 @@ Start producing streams to the 'emb' topic - 1 stream per line and file. We have
 ```	
 
 ```
-sudo docker exec -it elasticsearch bash
+docker exec -it elasticsearch bash
 ```
 
 Iniside the container
