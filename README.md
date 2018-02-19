@@ -36,6 +36,8 @@
 
 ```
 
+  For avoiding to introduce the password for docker/docker-compose commands, we recommend to create two Unix groups, one called docker and other called docker-compose (see notes from: note_add_sudo_docker.txt) and add users to it. 
+
 1. Upload the dockerized architecture-  (open a new tab - because the current one will be using for the docker-logs)
 
 ```
