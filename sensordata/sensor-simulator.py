@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-#python sensor_simulator.py -s emb3
+#python sensor-simulator.py -s emb3
 
 import argparse
 import requests
