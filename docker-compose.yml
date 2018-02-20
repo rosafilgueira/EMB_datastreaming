@@ -34,6 +34,7 @@ services:
       - ./data/namenode:/hadoop/dfs/name
     environment:
       - CLUSTER_NAME=test
+    env_file:
       - ./hadoop.env
     ports:
       - 50070:50070
@@ -53,7 +54,6 @@ services:
     container_name: spark-master
     environment:
       - MASTER=spark://spark-master:7077
-      - SPARK_PUBLIC_DNS=192.171.148.207
       - SPARK_DRIVER_MEMORY=2g
       - SPARK_MASTER_WEBUI_PORT=8080
       - SPARK_MASTER_OPTS="-Dspark.driver.port=7021"
@@ -93,7 +93,6 @@ services:
       - SPARK_WORKER_WEBUI_PORT=8081
       - SPARK_EXECUTOR_INSTANCES=1
       - SPARK_MASTER=spark://spark-master:7077
-      - SPARK_PUBLIC_DNS=192.171.148.207
       - SPARK_DRIVER_MEMORY=2g
     links:
       - spark-master
@@ -137,7 +136,6 @@ services:
       - "8888:8888"
     volumes:
       - ./spark:/home/jovyan/work
-      - ./mydata:/home/jovyan/work/data
     command: "start-notebook.sh --NotebookApp.token=''"
 
   
