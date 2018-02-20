@@ -33,12 +33,12 @@ services:
     container_name: spark-master
     environment:
       - MASTER=spark://spark-master:7077
-      - SPARK_PUBLIC_DNS = 192.5.87.35
+      - SPARK_PUBLIC_DNS = localhost
       - SPARK_DRIVER_MEMORY=2g
       - SPARK_MASTER_WEBUI_PORT=8080
       - SPARK_MASTER_OPTS="-Dspark.driver.port=7021"
     expose:
-      - 7021
+      - 7001
       - 7002
       - 7003
       - 7004
@@ -47,11 +47,11 @@ services:
       - 7077
       - 6066
     ports:
-      - 7021:7021
-      - 4040:4040
-      - 8080:8080
-      - 7077:7077
-      - 6066:6066
+      - "7021:7021"
+      - "4040:4040"
+      - "8080:8080"
+      - "7077:7077"
+      - "6066:6066"
     volumes:
       - ./conf/master:/conf
       - ./pyspark_app:/app/
@@ -70,7 +70,7 @@ services:
       - SPARK_WORKER_MEMORY=1g
       - SPARK_WORKER_PORT=8881
       - SPARK_WORKER_WEBUI_PORT=8081
-      - SPARK_PUBLIC_DNS = 192.5.87.35
+      - SPARK_PUBLIC_DNS = localhost
       - SPARK_EXECUTOR_INSTANCES=1
       - SPARK_MASTER=spark://spark-master:7077
       - SPARK_DRIVER_MEMORY=2g
@@ -78,12 +78,7 @@ services:
       - spark-master
       - kafka
       - elasticsearch
-    depends_on:
-      - spark-master
-      - kafka
-      - elasticsearch
     expose:
-      - 7011
       - 7012
       - 7013
       - 7014
@@ -91,8 +86,9 @@ services:
       - 7016
       - 8881
     ports:
-      - 7011:7011
-      - 8081:8081
+      - "7011:7011"
+      - "8081:8081"
+      - "8881:8881"
     volumes:
       - ./conf/worker:/conf
       - ./pyspark_app/tmp:/test_output
@@ -104,9 +100,6 @@ services:
     image: jupyter/pyspark-notebook
     hostname: jupyter
     container_name: spark-notebook
-    depends_on:
-      - spark-master
-      - kafka
     links:
       - spark-master
       - kafka
