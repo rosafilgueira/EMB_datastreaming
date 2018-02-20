@@ -56,6 +56,8 @@ docker-compose ps
 ./create-topic.sh kafka zookeeper:2181 emb
 ```
 
+*Note*: ./start_streaming_sensor.sh will do the steps 3 + 4 together
+
 4. Simulation of readings from sensors. 
 Start producing streams to the 'emb' topic - 1 stream per line and file. We have added the sensor_id to each line, so we know from which sensor the data is been streamed from. 
 
