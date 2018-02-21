@@ -27,7 +27,7 @@ def integer_or_na(value):
 	return int(value_1) if value_1!='(na)' else 0 
 
 def saveToES(rdd, es_conf):
-    rdd_es = rdd.map(lambda x: [e for e in x]).map(lambda e: json.dumps({'date': e[1], 'time': e[2], 'sec':integer_or_na(e[3]), 'ph':float_or_na(e[4]), 'water_level':float_or_na(e[5]), 'water_temp':float_or_na(e[6]), 'tdg':integer_or_na(e[7]), 'qc':qualityControl(e), 'sensor_id': e[0]})).map(lambda x: ('id', x))
+    rdd_es = rdd.map(lambda x: [e for e in x]).map(lambda e: json.dumps({'date': e[1], 'time': e[2], 'sec':integer_or_na(e[3]), 'ph':float_or_na(e[4]), 'water_level':float_or_na(e[5]), 'water_temp':float_or_na(e[6]), 'tdg':integer_or_na(e[7]), 'qc':qualityControl(e), 'sensor_id': e[0][1:]})).map(lambda x: ('id', x))
     print("cleaned rdd %s" % rdd_es.collect())	
 
     rdd_es.saveAsNewAPIHadoopFile(
