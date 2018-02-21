@@ -56,7 +56,7 @@ docker-compose ps
 ./create-topic.sh kafka zookeeper:2181 emb
 ```
 
-*Note*: ./start_streaming_sensor.sh will do the steps 3 + 4 together
+** Note: ./start_streaming_sensor.sh will do the steps 3 + 4 together 
 
 4. Simulation of readings from sensors. 
 Start producing streams to the 'emb' topic - 1 stream per line and file. We have added the sensor_id to each line, so we know from which sensor the data is been streamed from. 
@@ -144,6 +144,13 @@ cd /opt/create-index
  8. Checking/Getting data/values Elastisearch:
 
  Two options:
+
+   Outside the container (recommended):
+   
+   ```
+   python elasticsearch_query.py
+   ```
+
    Inside the elasticsearch container:
 	
   ```
@@ -152,12 +159,6 @@ cd /opt/create-index
    ./check_values.sh
   ```
 	
- Outside the container: 
-	
-```
-curl -XGET 'locahost:9200/emb_test/_mapping/emb?pretty=1'
-```
-  Or you could run the examples_elasticsearch_querires
 	
 
 
