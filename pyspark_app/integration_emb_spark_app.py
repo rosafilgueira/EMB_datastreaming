@@ -55,7 +55,8 @@ if __name__ == "__main__":
                "es.port": args.es_port,
                "es.resource": '/'.join(['emb_test', 'emb']),
                "es.input.json": "true",
-               "es.batch.size.entries": '100'}
+               "es.batch.size.entries": '100',
+		"es.nodes.wan.only": "false"}
 
     sc = SparkContext(appName="PythonStreamingKafkaEMB")
     ssc = StreamingContext(sc, 3)
