@@ -21,4 +21,4 @@ sudo pip install --upgrade pip
 
 sudo pip install docker-compose
 
-pip install elasticsearch
+sudo pip install elasticsearch
