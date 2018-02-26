@@ -1,6 +1,5 @@
 # UIs:
 	Spark-Jobs: http://IP-address:4040
-	Spark-Notebook: http://IP-address:8888
 	Spark-Master: http://IP-address:8080
 	Spark-Worker: http://IP-address:8081
 	ElasticSearch: http://IP-address:9200
