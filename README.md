@@ -141,6 +141,10 @@ cd /opt/create-index
   ```
   start_pyspark_app.sh
   ```
+  
+  You can always check the Spark UI to check how the data is being streamed.
+  
+  ![Figure streaming UI](https://github.com/rosafilgueira/EMB_datastreaming/blob/master/spark-straming-UI2.png)
 
  8. Checking/Getting data/values Elastisearch:
 
@@ -163,6 +167,8 @@ cd /opt/create-index
 9. Exploring you data in Kibana:
 
 Open a browser and type: http://IP-ADDRESS:5601
+
+![Figure kibana](https://github.com/rosafilgueira/EMB_datastreaming/blob/master/kibana-screenshot.png)
 
 
 
