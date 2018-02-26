@@ -29,12 +29,16 @@
 
 (0.)  If you start from a 'clean'/'new' Centos7 VM --> You need to set up docker and docker-compose enviroment  
 
-```
-   ./config.sh 
 
-```
 
-  For avoiding to introduce the password for docker/docker-compose commands, we recommend to create two Unix groups, one called docker and other called docker-compose (see notes from: note_add_sudo_docker.txt) and add users to it. 
+ For avoiding to introduce the password for docker/docker-compose commands, we recommend to create two Unix groups, one called docker and other called docker-compose (see notes from: note_add_sudo_docker.txt) and add users to it. 
+  
+  
+  It is also recomendable to increase the virtual memory (requirement for elasticsearch)
+  
+  ```
+    sysctl -w vm.max_map_count=262144
+  ```
 
 1. Upload the dockerized architecture-  (open a new tab - because the current one will be using for the docker-logs)
 
@@ -126,7 +130,7 @@ cd /opt/create-index
  docker exec -it spark-master bash
  ```
  
- Two options to submit an application: 
+Two options to submit an application: 
   7.A) Inside the container:
   
   ```
