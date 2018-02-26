@@ -142,7 +142,7 @@ cd /opt/create-index
   start_pyspark_app.sh
   ```
   
-  You can always check the Spark UI to check how the data is being streamed.
+  You can always check the Spark UIs (8080, 8081, 4040, 4041) to check how the data is being streamed, and how the master and the workers perform. Here you have an example of the job history UI (ports 4040 or 4041 - depending if you have submitted the application with start_pyspark_app.sh (port 4041) or submit_emb_master.sh (port 4040))
   
   ![Figure streaming UI](https://github.com/rosafilgueira/EMB_datastreaming/blob/master/spark-straming-UI2.png)
 
@@ -166,7 +166,7 @@ cd /opt/create-index
 	
 9. Exploring you data in Kibana:
 
-Open a browser and type: http://IP-ADDRESS:5601
+Open a browser and type: http://IP-address:5601. You have several options to visualize your data from elasticsearch.
 
 ![Figure kibana](https://github.com/rosafilgueira/EMB_datastreaming/blob/master/kibana-screenshot.png)
 
