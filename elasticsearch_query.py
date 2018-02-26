@@ -5,6 +5,11 @@ from elasticsearch import Elasticsearch
 es = Elasticsearch([{'host':'localhost', 'port':9200}])
 response = requests.get('http://localhost:9200/emb_test')
 
+headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json; charset=UTF-8'
+}
+
 print response
 
 #res = es.get(index="emb_test", doc_type="emb", id="AWG46Yeq17_Xh6R0pg12")
