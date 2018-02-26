@@ -94,21 +94,6 @@ services:
       - ./pyspark_app/scripts:/scripts
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
 
-  notebook:
-    image: jupyter/pyspark-notebook
-    hostname: jupyter
-    container_name: spark-notebook
-    links:
-      - spark-master
-      - kafka
-    environment:
-      - SPARK_OPTS='--master=spark://spark-master:7077'
-    ports:
-      - "8888:8888"
-    volumes:
-      - ./spark:/home/jovyan/work
-    command: "start-notebook.sh --NotebookApp.token=''"
-
   
   elasticsearch:
     build: docker-elasticsearch/
@@ -117,8 +102,9 @@ services:
     environment:
       - Des.network.host=0.0.0.0
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
-    volumes:
-      - ./docker-elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - cluster.name = "elasticsearch"
+      - discovery.zen.minimum_master_nodes= 1
+      - discovery.type= single-node
     expose:
       - 9200
     ports:
@@ -126,11 +112,15 @@ services:
 
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:6.2.2
+    build: kibana/
     container_name: kibana
     hostname: kibana
-    volumes:
-      - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    environment:
+      - SERVER_NAME="kibana"
+      - SERVER_HOST="0"
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+    #volumes:
+    #  - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
     ports:
       - "5601:5601"
     links:
