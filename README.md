@@ -13,8 +13,8 @@
 
 |Name	        |version               |
 |---------------|:--------------------:|
-|Elasticsearch	|6.2.2 (oos)           |
-|Kibana 	|6.2.2                 |
+|Elasticsearch	|6.2.2 (oss)           |
+|Kibana 	|6.2.2 (oss)           |
 |Kafka	        |0.10.2.0	       |
 |Spark    	|2.2.0		       |
 |Hadoop	        |1.1.0-hadoop2.8       |
