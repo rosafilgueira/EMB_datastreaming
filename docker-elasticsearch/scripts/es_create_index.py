@@ -37,11 +37,16 @@ def create_index(cnx,config):
     
     # dropping the index in case it exists. 
     es_drop.drop_index(cnx, config)
-    
+     
+    headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json; charset=UTF-8'
+        }
+       
     # Creation of the settings
     sys.stderr.write( "  Creating settings for index %s\n" % config.index)
     ###############################################
-    cnx.request("PUT",config.index,settings_json) #
+    cnx.request("PUT",config.index,settings_json, headers=headers) #
     ###############################################
     resp=cnx.getresponse()
     sys.stderr.write( resp.read() + "\n")

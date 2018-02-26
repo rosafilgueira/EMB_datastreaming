@@ -29,7 +29,6 @@ nb_retry_max=10                     # Number of allowed retries when loading a d
 
 
 mapping={ "_routing":{ "required":False },
-          "_all": { "enabled": True },
           "properties" : {
 	     "sensor_id": {"type": "text"},
              "date" : { "type" : "date", "format":"yyyy-MM-dd"},
