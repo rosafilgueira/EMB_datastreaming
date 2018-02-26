@@ -22,3 +22,5 @@ sudo pip install --upgrade pip
 sudo pip install docker-compose
 
 sudo pip install elasticsearch
+
+sudo sysctl -w vm.max_map_count=262144
