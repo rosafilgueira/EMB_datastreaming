@@ -1,9 +1,0 @@
----
-## Default Elasticsearch configuration from elasticsearch-docker.
-## from https://github.com/elastic/elasticsearch-docker/blob/master/build/elasticsearch/elasticsearch.yml
-#
-network.host: 0.0.0.0
-xpack.security.enabled: false
-xpack.monitoring.enabled: false
-xpack.watcher.enabled: false
-xpack.graph.enabled: false
