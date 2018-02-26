@@ -160,6 +160,9 @@ cd /opt/create-index
    ./check_values.sh
   ```
 	
-	
+9. Exploring you data in Kibana:
+
+Open a browser and type: http://IP-ADDRESS:5601
+
 
 
