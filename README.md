@@ -1,6 +1,4 @@
 # UIs:
-	Hadoop: http://IP-address:50070/
-	Datanode: http://IP-address:50075
 	Spark-Jobs: http://IP-address:4040
 	Spark-Notebook: http://IP-address:8888
 	Spark-Master: http://IP-address:8080
