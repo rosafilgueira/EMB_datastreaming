@@ -52,18 +52,18 @@ docker-compose up
 docker-compose ps
 ```
 
-3. Create the 'emb' topic for our application 
+3. Create the 'emb' topic for our application. Important: we recommend to use ./start_streaming_sensor.sh , which will save you to create the topic manually. Nevertheless, here you have the script for creating a topic 'manually'. 
 
 ```
 ./create-topic.sh kafka zookeeper:2181 emb
 ```
 
-** Note: ./start_streaming_sensor.sh will do the steps 3 + 4 together 
+** Note: ./start_streaming_sensor.sh will do the steps 3 + 4.1 together  - Recommended option
 
-4. Simulation of readings from sensors. 
+4. Simulation of readings from sensors (we are going to stream data every 3 seconds but you can change the ratio of streaming). 
 Start producing streams to the 'emb' topic - 1 stream per line and file. We have added the sensor_id to each line, so we know from which sensor the data is been streamed from. 
 
-* 4.1 Using websevices - Falcon (recommended option):
+* 4.1 Using websevices - Falcon (recommended option) - This option is included inside "start_streaming_sensor.sh".
   In a new terminal start a feeder script POSTing messages to Falcon. With -s you can indicate which sensor you want to stream data from.
   We have locally stored data from 'emb3' and 'emb2' sensors. 
   
