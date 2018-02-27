@@ -29,12 +29,16 @@
 
 (0.)  If you start from a 'clean'/'new' Centos7 VM --> You need to set up docker and docker-compose enviroment  
 
-```
-   ./config.sh 
 
-```
 
-  For avoiding to introduce the password for docker/docker-compose commands, we recommend to create two Unix groups, one called docker and other called docker-compose (see notes from: note_add_sudo_docker.txt) and add users to it. 
+ For avoiding to introduce the password for docker/docker-compose commands, we recommend to create two Unix groups, one called docker and other called docker-compose (see notes from: note_add_sudo_docker.txt) and add users to it. 
+  
+  
+  It is also recomendable to increase the virtual memory (requirement for elasticsearch)
+  
+  ```
+    sysctl -w vm.max_map_count=262144
+  ```
 
 1. Upload the dockerized architecture-  (open a new tab - because the current one will be using for the docker-logs)
 
@@ -126,14 +130,14 @@ cd /opt/create-index
  docker exec -it spark-master bash
  ```
  
- Two options to submit an application: 
-  7.A) Inside the container:
+Two options to submit an application: 
+7.A) Inside the container:
   
   ```
   7.A.1 cd /app/submit_scripts ( pyspark application is at /app)
   7.A.2 ./submit_emb_local.sh (locally version - ideal for testing) or ./submit_emb_spark.sh (master-cluster version - distributed)
   ```
-  7.B) Outside the container (using the master-cluster version) - Submiting an apache Spark appication to the Spark Master-cluster
+7.B) Outside the container (using the master-cluster version) - Submiting an apache Spark appication to the Spark Master-cluster
  
   ```
   start_pyspark_app.sh
