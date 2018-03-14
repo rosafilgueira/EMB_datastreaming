@@ -119,7 +119,7 @@ docker exec -it elasticsearch bash
 Iniside the container
 
 ```
-cd /opt/create-index
+cd /opt/create-es-index
 ./check_index.sh
 ./check_values.sh
 ```
