@@ -55,7 +55,7 @@ docker-compose ps
 3. Create the 'emb' topic for our application. Important: we recommend to use ./start_streaming_sensor.sh , which will save you to create the topic manually. Nevertheless, here you have the script for creating a topic 'manually'. 
 
 ```
-./create-topic.sh kafka zookeeper:2181 emb
+./create-topic.sh kafka zookeeper:2181 emb3
 ```
 
 ** Note: ./start_streaming_sensor.sh will do the steps 3 + 4.1 together  - Recommended option
