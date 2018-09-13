@@ -22,7 +22,7 @@ services:
     links: 
       - zookeeper
     environment:
-      - KAFKA_ADVERTISED_HOST=kafka 
+      - KAFKA_ADVERTISED_HOST_NAME=kafka=kafka 
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_ADVERTISED_PORT=9092
     volumes:
